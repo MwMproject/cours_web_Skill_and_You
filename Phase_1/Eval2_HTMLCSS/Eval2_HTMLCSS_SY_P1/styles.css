@@ -1,0 +1,184 @@
+/*Styles du body*/
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 960px;
+        margin: 0 auto;
+}
+
+/*En-tête*/
+header {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: "Lucida Unicode Calligraphy", cursive;
+    text-align: center;
+    color: #aa3322;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/*Barre de navigation*/
+nav {
+    background-color: #aa3322;
+    color: #cccccc;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #cccccc;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-weight: bold;
+    border-right: 1px dashed #cccccc;
+}
+
+nav a:hover {
+    background-color: #cccccc;
+    color: #ffffff
+}
+
+/*Bannière*/
+.banner {
+    width: 100%;
+    height: 200px;
+    background-image: url("03-img/bandeau.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*Contenu principal*/
+.content {
+    margin-left: 50px;
+    background: white;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+h2 {
+    color: #000000;
+    font-size : 26px;
+    text-align : center;
+}
+
+h3 {
+    color: #000000;
+    font-size : 20px;
+}
+
+p {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/*boites des livres coups de coeur*/
+.book-card {
+    background-color: #ededed;
+    border: 2px solid #aa3322;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.book-card h4 em{
+    color: #aa3322;
+    font-size: 16px;
+    font-weight: bold;
+}
+.normal-text {
+    font-weight: normal;
+}
+
+.book-card p strong {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-grid {
+    display: flex;
+    gap: 5px;
+    padding-left: 50px;
+    width: 80%;
+}
+
+/*Liens*/
+a {
+    font-size: 14px;
+    color: #aa3322;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+/*lien ancrés*/
+.categories {
+    text-align: center;
+}
+
+.categories a {
+    font-size: 16px;
+}
+
+/*extraits choisis*/
+.container h3
+{
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+.container p
+{
+    font-size: 14px;
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.quote-box {
+        background-color: #ededed;
+        border: 1.5px dashed #aa3322;
+        padding: 10px;
+        font-style: italic;
+        text-align: left;
+        display: flex;
+        width: 450px;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+/*Pied de page*/
+.footer {
+    font-size: 14px;
+    background: #cccccc;
+    color: #721717;
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer strong {
+    color: #721717;
+    text-align: right;
+    font-style: italic;
+    font-weight: bold; 
+}
