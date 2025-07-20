@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boot Voyages - Accueil</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Bandeau Titre -->
+  <div class="bg-info text-center text-white py-4">
+    <h1 class="mb-0">Boot Voyages</h1>
+    <p class="mb-0">Des excursions aux quatre coins du monde</p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-globe fs-4"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tarifs.html">Tarifs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="devis.html">Devis</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<!-- Section : Les villes du mois -->
+<section class="container text-center my-5">
+  <h2 class="mb-4">Les villes du mois</h2>
+  <div id="carouselVilles" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselVilles" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselVilles" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselVilles" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner rounded">
+
+      <!-- 1. Rio -->
+      <div class="carousel-item active">
+        <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/rio.jpg" class="d-block w-100" alt="Rio de Janeiro">
+        <div class="carousel-caption bg-dark bg-opacity-75 rounded px-3">
+          <h5>Rio de Janeiro</h5>
+          <p>Un séjour haut en couleur</p>
+        </div>
+      </div>
+
+      <!-- 2. Prague -->
+      <div class="carousel-item">
+        <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/prague.jpg" class="d-block w-100" alt="Prague">
+        <div class="carousel-caption bg-dark bg-opacity-75 rounded px-3">
+          <h5>Prague</h5>
+          <p>Un joyau architectural européen</p>
+        </div>
+      </div>
+
+      <!-- 3. Dubaï -->
+      <div class="carousel-item">
+        <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/dubai.jpg" class="d-block w-100" alt="Dubaï">
+        <div class="carousel-caption bg-dark bg-opacity-75 rounded px-3">
+          <h5>Dubaï</h5>
+          <p>Entre modernité et désert</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Flèches de navigation -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselVilles" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselVilles" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+  <!-- Section : Top 5 des destinations -->
+  <section class="container text-center my-5">
+    <h2 class="mb-4">Top 5 des destinations</h2>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/guadeloupe.jpg" class="card-img-top" alt="Guadeloupe">
+          <div class="card-body">
+            <h5 class="card-title">Guadeloupe</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-outline-secondary">Lire la suite</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/thailande.jpg" class="card-img-top" alt="Thaïlande">
+          <div class="card-body">
+            <h5 class="card-title">Thaïlande</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-outline-secondary">Lire la suite</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/maroc.jpg" class="card-img-top" alt="Maroc">
+          <div class="card-body">
+            <h5 class="card-title">Maroc</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-outline-secondary">Lire la suite</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/nouvelle-zelande.jpg" class="card-img-top" alt="Nouvelle-Zélande">
+          <div class="card-body">
+            <h5 class="card-title">Nouvelle-Zélande</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-outline-secondary">Lire la suite</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="Annexes Eval3_mini_site_avec_Bootstrap/images/grece.jpg" class="card-img-top" alt="Grèce">
+          <div class="card-body">
+            <h5 class="card-title">Grèce</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-outline-secondary">Lire la suite</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-info text-center text-white py-3 mt-5">
+    <p class="mb-0">&copy; Boot Voyages - Tous droits réservés</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
