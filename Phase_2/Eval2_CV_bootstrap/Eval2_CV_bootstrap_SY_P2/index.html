@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Weiss Manuel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Barre de navigation pour la langue -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- Bootstrap utilisé :
+                navbar : composant de navigation principal.
+                navbar-dark : texte clair pour fond sombre.
+                bg-dark : fond sombre (noir/gris foncé par défaut)-->
+            <div class="container-fluid">
+                <!-- Bootstrap utilisé :
+                    container-fluid : conteneur qui prend toute la largeur de l’écran.    -->
+                <a class="navbar-brand" href="#">Mon CV</a>
+                <div class="navbar-nav ms-auto"> 
+                    <a class="nav-link" href="index.html">Français</a>
+                    <a class="nav-link" href="english.html">English</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- Bootstrap utilisé :
+                row : ligne de la grille Bootstrap.
+                min-vh-100 : hauteur minimale de 100% de la hauteur de la fenêtre. -->
+            <!-- Colonne gauche -->
+            <div class="col-md-4 section-bleue p-4">
+                <!-- Bootstrap utilisé :
+                    col-md-4 : colonne de largeur 4 sur 12  pour les écrans de taille moyenne ou plus.
+                    section-bleue : classe personnalisée pour le style de la section. -->
+                <div class="text-center">
+                    <!-- Bootstrap utilisé :
+                        text-center : centre le texte dans la colonne. -->
+                    <img src="Photo_de_profil.jpg" alt="Photo de profil" class="photo-profil">
+                    <h1 class="h3">Weiss Manuel</h1>
+                    <p>
+                        Rte de Bercher 2<br>
+                        1045 Ogens<br>
+                        mweiss1377@gmail.com<br>
+                        078 971 93 13
+                    </p>
+                </div>
+                <!-- ligne de séparation entre les infos et les compétences -->
+                <hr class="border-light">
+                <!-- Bootstrap utilisé :
+                    border-light : couleur de la bordure claire. -->
+                <h3>Compétences</h3>
+                <ul class="list-unstyled">
+                    <!-- Bootstrap utilisé :
+                        list-unstyled : enlève les puces de la liste. -->
+                    <li>Relationnel & travail en équipe</li>
+                    <li>Gestion de la relation client</li>
+                    <li>Connaissance bâtiment</li>
+                    <li>Sens de l'organisation</li>
+                    <li>Techniques de vente</li>
+                </ul>
+
+                <h3>Langues</h3>
+                <ul class="list-unstyled">
+                    <!-- Bootstrap utilisé :
+                        list-unstyled : enlève les puces de la liste. -->
+                    <li>Français : Langue maternelle</li>
+                    <li>Allemand : Niveau scolaire</li>
+                    <li>Anglais : Niveau scolaire</li>
+                </ul>
+
+                <h3>Hobbies</h3>
+                <ul class="list-unstyled">
+                    <!-- Bootstrap utilisé :
+                        list-unstyled : enlève les puces de la liste. -->
+                    <li>Football</li>
+                    <li>Informatique</li>
+                    <li>Sports automobiles</li>
+                    <li>Musique</li>
+                </ul>
+            </div>
+            <!-- Colonne droite -->
+            <div class="col-md-8 bg-white p-5">
+                <!-- Bootstrap utilisé :
+                    col-md-8 : colonne de largeur 8 sur 12 pour les écrans de taille moyenne ou plus.
+                    bg-white : fond blanc. -->
+                <h2>À propos de moi</h2>
+                <p>
+                    Passionné par l’informatique, le football, les sports automobiles et la musique, je suis une
+                    personne
+                    dynamique, curieuse et impliquée. Mon parcours professionnel m’a permis de développer un excellent
+                    sens du
+                    relationnel ainsi qu’une bonne capacité à travailler en équipe. Grâce à mes expériences, je maîtrise
+                    les
+                    techniques de vente, la gestion de la relation client, et possède une bonne connaissance des
+                    produits et
+                    techniques du bâtiment, notamment dans le gros œuvre.
+                </p>
+                <h2>Expériences professionnelles</h2>
+                <ul class="section-white">
+                    <li><strong>À ce jour</strong> – Vendeur, livreur et commercial chez Agemo SA</li>
+                    <li><strong>2022 – 2025</strong> – Maçon chez Dutoit Frères Sàrl</li>
+                    <li><strong>2020 – 2022</strong> – Représentant matériaux chez Dubat SA</li>
+                    <li><strong>2019 – 2020</strong> – Vendeur quincaillerie chez HG Commercial</li>
+                    <li><strong>2014 – 2019</strong> – Technico-commercial chez Dubat SA</li>
+                    <li><strong>2011 – 2014</strong> – Maçon et désamiantage chez P.-Y. & fils Construction SA</li>
+                </ul>
+                <h2>Formations</h2>
+                <ul class="section-white">
+                    <li><strong>2024</strong> – Sergent (Protection civile)</li>
+                    <li><strong>2019</strong> – Caporal (Protection civile)</li>
+                    <li><strong>2014 – 2020</strong> – Formations internes (Isover, Swisspor…)</li>
+                    <li><strong>2011</strong> – Désamiantage certifié SUVA</li>
+                    <li><strong>2008 – 2011</strong> – Apprentissage de maçon CFC</li>
+                    <li><strong>2008</strong> – Certificat d’études secondaires</li>
+                </ul>
+                <h2>Contact</h2>
+                <a href="mailto:mweiss1377@gmail.com" class="btn btn-dark">Me contacter</a>
+                <!-- Bootstrap utilisé :
+                    btn : classe de bouton Bootstrap.
+                    btn-dark : bouton sombre. -->
+            </div>
+        </div>
+    </main>
+    <footer>    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+</body>
+</html>

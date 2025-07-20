@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', Verdana, sans-serif;
+}
+
+/* Section gauche bleue */
+.section-bleue {
+    background-color: #3a4e61;
+    color: white;
+    min-height: 100vh;
+}
+.section-bleue h1,
+.section-bleue h3,
+.section-bleue p,
+.section-bleue li {
+    color: rgb(255, 255, 255);
+}
+
+/* Photo de profil */
+.photo-profil {
+    width: 200px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+}
