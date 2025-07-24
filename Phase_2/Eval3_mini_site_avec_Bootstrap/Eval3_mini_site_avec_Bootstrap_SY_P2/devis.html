@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boot Voyages - Devis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Bandeau -->
+  <div class="bg-info text-center text-black py-4">
+    <h1 class="mb-0">Boot Voyages</h1>
+    <h3 class="mb-0">Des excursions aux quatre coins du monde</h3>
+  </div>
+
+  <!-- Navigation -->
+  <header class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-globe-americas fs-4" style="color: rgb(1, 136, 1);"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tarifs.html">Tarifs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="devis.html">Devis</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Section Devis -->
+  <section class="container my-5">
+    <h2 class="text-center mb-3" style="color: rgb(13, 202, 240);">Demande de devis</h2>
+    <p class="text-center text-muted mb-5">Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé</p>
+
+    <form>
+      <!-- Coordonnées -->
+      <div class="mb-4">
+        <h5>Vos coordonnées</h5>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" id="prenom" class="form-control" placeholder="Votre prénom" />
+          </div>
+          <div class="col-md-6">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" id="nom" class="form-control" placeholder="Votre nom" />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" id="email" class="form-control" placeholder="Votre e-mail" />
+          </div>
+          <div class="col-md-6">
+            <label for="telephone" class="form-label">Téléphone</label>
+            <input type="tel" id="telephone" class="form-control" placeholder="Votre numéro de téléphone" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Séjour -->
+      <div class="mb-4">
+        <h5>Votre séjour</h5>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" id="destination" class="form-control" placeholder="Votre destination" />
+          </div>
+          <div class="col-md-3">
+            <label for="depart" class="form-label">Date départ</label>
+            <input type="date" id="depart" class="form-control" />
+          </div>
+          <div class="col-md-3">
+            <label for="retour" class="form-label">Date retour</label>
+            <input type="date" id="retour" class="form-control" />
+          </div>
+          <div class="col-md-6">
+            <label for="voyageurs" class="form-label">Voyageurs</label>
+            <input type="number" id="voyageurs" class="form-control" placeholder="Nombre de voyageurs" />
+          </div>
+          <div class="col-md-6">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-control" rows="3" placeholder="Message"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton -->
+      <div class="text-start">
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-5 mt-5" style="background-color: rgb(13, 202, 240); color: rgb(0, 0, 0);">
+    <p class="mb-0">&copy; Boot Voyages - Tous droits réservés</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
