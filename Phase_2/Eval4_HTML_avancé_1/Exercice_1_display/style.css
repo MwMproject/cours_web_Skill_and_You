@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  max-width: 1180px;
+  border-radius: 12px;
+}
+
+header {
+  padding: 20px;
+  top: 0;
+  width: 100%;
+}
+
+header h1 {
+  text-align: center;
+  color: #139c29;
+  font-size: 4rem;
+  text-shadow: #000 2px 2px 0;
+  letter-spacing: 2px;
+  padding: 15px 0;
+}
+header nav {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  background: linear-gradient(to right, #444, #111);
+  box-shadow: 0 4px 6px #9c9c9c;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+}
+
+nav ul li:hover > a {
+  background-color: #1af80a;
+}
+
+.mega-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  gap: 20px;
+  width: 550px;
+}
+
+.dropdown:hover .mega-content {
+  display: block;
+}
+
+.mega-content section {
+  width: 220px;
+}
+
+.mega-content section h4 {
+  margin-bottom: 10px;
+  color: #0066cc;
+}
+
+.mega-content section a {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.mega-content section a:hover {
+  color: #000;
+}
+
+.mega-content section img {
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Main layout */
+.main-content {
+  display: flex;
+  margin: auto;
+  padding: 20px 20px;
+}
+
+.left-column {
+  width: 70%;
+  flex: 2;
+}
+
+.left-column img {
+  max-width: 100%;
+}
+
+.legend-img {
+  font-style: italic;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.title-icon {
+  width: 25px;
+  height: 25px;
+  background-color: #139c19;
+  border-radius: 50% 0 0 50%;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.right-column img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #f8f8f8;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+
+}
+
+footer ul li a {
+  color: #e9f6e9;
+  text-decoration: none;
+  padding: 10px 15px;
+  background: linear-gradient(to right, #19b123, #139c19);
+  border-radius: 50px;
+}
+
+footer ul li a:hover {
+  color: #000000;
+  background-color: rgb(21, 165, 29, 0.5);
+}
+
+
