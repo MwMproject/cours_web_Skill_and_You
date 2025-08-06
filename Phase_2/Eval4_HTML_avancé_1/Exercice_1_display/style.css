@@ -12,8 +12,7 @@ body {
 }
 .main_page {
   max-width: 1180px;
-  margin: auto;
-  padding: 20px;
+  margin: 0 auto;
   background-color: whitesmoke;
   border-radius: 12px;
 }
@@ -104,17 +103,39 @@ nav li:hover > a {
   display: flex;
   margin: auto;
   padding: 20px 20px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+main::after {
+  content: "";
+  display: block;
+  height: 2px; 
+  background-color: #139c19; 
 }
 
 .left-column {
-  width: 70%;
-  flex: 2;
+  flex: 2
 }
 
 .left-column img {
   max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
-
+.left-column h2 {
+  color: #139c19;
+  font-size: 2.5rem;
+  
+  margin-bottom: 20px;
+}
+.globule-text_1 {
+ color: #777;
+ font-style: italic;
+}
 .legend-img {
   font-style: italic;
   margin: 10px 0;
@@ -123,9 +144,9 @@ nav li:hover > a {
 
 .title-icon {
   width: 25px;
-  height: 25px;
+  height: 35px;
   background-color: #139c19;
-  border-radius: 50% 0 0 50%;
+  border-radius: 60% 0 0 60%;
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
@@ -142,7 +163,6 @@ nav li:hover > a {
 }
 
 footer {
-  background-color: #f8f8f8;
   color: white;
   padding: 20px;
   margin-top: 40px;
@@ -157,7 +177,7 @@ footer ul {
 
 }
 
-footer ul li a {
+footer a {
   color: #e9f6e9;
   text-decoration: none;
   padding: 10px 15px;
@@ -165,9 +185,9 @@ footer ul li a {
   border-radius: 50px;
 }
 
-footer ul li a:hover {
-  color: #000000;
-  background-color: rgb(21, 165, 29, 0.5);
+footer a:hover {
+  color: #000;
+  background: rgb(21, 165, 29, 0.5);
 }
 
 
