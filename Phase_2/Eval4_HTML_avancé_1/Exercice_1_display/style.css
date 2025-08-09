@@ -21,9 +21,13 @@ body {
   max-width: 1180px;
 }
 
+.main-content {
+  display: table;
+  width: 100%;
+}
+
 /******************* HEADER ******************/
 header {
-  margin: 20px auto;
   padding: 20px;
 }
 
@@ -33,7 +37,6 @@ header h1 {
   font-size: 5rem;
   text-shadow: #000 2px 2px 0;
   letter-spacing: 2px;
-  padding: 20px 0;
 }
 
 /******************* NAVIGATION *******************/
@@ -115,8 +118,9 @@ nav li:hover > a {
 
 /******************* LEFT COLUMN *******************/
 .left-column {
-  float: left;
   width: 70%;
+  display: table-cell;
+  vertical-align: top;
 }
 
 .left-column h2 {
@@ -197,25 +201,36 @@ div.container_2 {
   text-align: justify;
   display: table-cell;
   padding: 0 15px;
-  border-right: 1px solid #ad36a7; /* trait vertical entre les deux */
+  border-right: 1px solid #ad36a7;
+}
+
+/******************* RIGHT COLUMN *******************/
+.right-column {
+  display: table-cell;
+  vertical-align: bottom; /* aligner le contenu en bas */
+  width: 30%;
+  padding-right: 30px;
+  box-shadow: -6px 4px 8px rgba(0,0,0,0.2);
+}
+
+.right-column img {
+  width: auto;
+}
+
+.right-column h2 {
+  color: #139c19;
+  margin-left: 20px;
+}
+
+.right-column p {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .right-column-text {
   text-align: justify;
   display: table-cell;
   padding: 0 15px;
-}
-
-/******************* RIGHT COLUMN *******************/
-.right-column {
-  float: left;
-  width: 30%;
-  box-shadow: -6px 4px 8px rgba(0,0,0,0.2);
-}
-
-.right-column img {
-  max-width: 100%;
-  border-radius: 5px;
 }
 
 /*****************GREEN LINE******************/
