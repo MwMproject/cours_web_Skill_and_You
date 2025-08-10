@@ -25,7 +25,6 @@ body {
 .main-content {
   display: table;
   width: 100%;
-  padding-left: 40px;
   padding-right: 40px;
 }
 
@@ -75,6 +74,10 @@ nav li:hover > a {
   color: #ffffff;
 }
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown:hover .mega-content {
   display: table;
 }
@@ -83,6 +86,8 @@ nav li:hover > a {
   display: none;
   width: 550px;
   position: absolute;
+  top: 100%;
+  left: 0;
   border-spacing: 0;
   border-left: 10px solid rgb(49, 49, 49);
   border-bottom: 10px solid rgb(49, 49, 49);
@@ -91,6 +96,8 @@ nav li:hover > a {
 
 .mega-content section {
   display: table-row;
+  width: 550px;
+  height: 200px;
   background: linear-gradient(to bottom, #19b123, #139c19);
 }
 
@@ -101,10 +108,14 @@ nav li:hover > a {
   color: #fff;
 }
 
-.mega-content section img {
-  display: table-cell;
-  width: 300px;
-  vertical-align: top;
+.mega-content section .image-block {
+  width: 250px;
+  height: 200px;
+}
+
+.mega-content section .image-block img {
+  height: 100%;
+  width: 100%;
 }
 
 .mega-content h4 {
@@ -134,7 +145,7 @@ nav li:hover > a {
   color: #139c19;
   font-size: 1.8rem;
   white-space: nowrap;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 40px 20px 40px;
 }
 
 .title-icon {
@@ -151,13 +162,13 @@ nav li:hover > a {
   text-align: justify;
   color: #777;
   font-style: italic;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 40px 20px 40px;
 }
 
 .globule-text_2, .globule-text_2b, .globule-text_3 {
   text-align: justify;
   color: #333;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 40px 20px 40px;
 }
 
 .container {
@@ -168,9 +179,7 @@ nav li:hover > a {
   float: left;
   width: 400px;
   margin-right: 20px;
-  margin-bottom: 20px;
   position: relative;
-  left: -40px; /* garde ce décalage si nécessaire, sinon à ajuster */
 }
 
 .image-block img {
@@ -194,6 +203,11 @@ nav li:hover > a {
 div.container_2 {
   margin-bottom: 20px;
   padding-right: 40px;
+}
+
+div.container_2 .left-column-text {
+  padding-left: 40px;
+
 }
 
 .left-column-text {
@@ -229,7 +243,10 @@ div.container_2 {
 }
 
 .right-column img {
-  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
 }
 
 /***************** GREEN LINE *******************/
@@ -237,6 +254,7 @@ main::after {
   content: "";
   display: block;
   height: 1px;
+  margin: 0px 40px 0px 40px;
   background-color: #139c19;
 }
 
