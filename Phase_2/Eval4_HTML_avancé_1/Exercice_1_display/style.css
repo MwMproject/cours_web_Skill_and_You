@@ -86,9 +86,6 @@ nav li:hover > a {
   display: none;
   width: 550px;
   position: absolute;
-  top: 100%;
-  left: 0;
-  border-spacing: 0;
   border-left: 10px solid rgb(49, 49, 49);
   border-bottom: 10px solid rgb(49, 49, 49);
   border-right: 10px solid rgb(49, 49, 49);
@@ -97,7 +94,7 @@ nav li:hover > a {
 .mega-content section {
   display: table-row;
   width: 550px;
-  height: 200px;
+  height: 190px;
   background: linear-gradient(to bottom, #19b123, #139c19);
 }
 
@@ -111,11 +108,15 @@ nav li:hover > a {
 .mega-content section .image-block {
   width: 250px;
   height: 200px;
+  padding: 0;
+  margin: 0;
 }
 
 .mega-content section .image-block img {
   height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .mega-content h4 {
@@ -165,7 +166,9 @@ nav li:hover > a {
   padding: 20px 40px 20px 40px;
 }
 
-.globule-text_2, .globule-text_2b, .globule-text_3 {
+.globule-text_2,
+.globule-text_2b,
+.globule-text_3 {
   text-align: justify;
   color: #333;
   padding: 20px 40px 20px 40px;
@@ -207,7 +210,6 @@ div.container_2 {
 
 div.container_2 .left-column-text {
   padding-left: 40px;
-
 }
 
 .left-column-text {
@@ -223,7 +225,7 @@ div.container_2 .left-column-text {
   vertical-align: bottom;
   width: 30%;
   padding-bottom: 30px;
-  box-shadow: -6px 4px 8px rgba(0,0,0,0.2);
+  box-shadow: -6px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .right-column h2 {
@@ -249,7 +251,7 @@ div.container_2 .left-column-text {
   margin-bottom: 20px;
 }
 
-/***************** GREEN LINE *******************/
+/******************* GREEN LINE *******************/
 main::after {
   content: "";
   display: block;
