@@ -16,6 +16,7 @@ body {
 .main_page {
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
   background-color: whitesmoke;
   border-radius: 12px;
   max-width: 1180px;
@@ -24,9 +25,11 @@ body {
 .main-content {
   display: table;
   width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-/******************* HEADER ******************/
+/******************* HEADER *******************/
 header {
   padding: 20px;
 }
@@ -55,7 +58,6 @@ nav ul {
 
 nav li {
   display: inline-block;
-  text-align: left;
   position: relative;
 }
 
@@ -70,6 +72,7 @@ nav a {
 
 nav li:hover > a {
   background-color: #139c19;
+  color: #ffffff;
 }
 
 .dropdown:hover .mega-content {
@@ -78,56 +81,60 @@ nav li:hover > a {
 
 .mega-content {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  padding: 20px;
   width: 550px;
-  z-index: 10;
-  border-spacing: 20px; /* espace entre colonnes */
+  position: absolute;
+  border-spacing: 0;
+  border-left: 10px solid rgb(49, 49, 49);
+  border-bottom: 10px solid rgb(49, 49, 49);
+  border-right: 10px solid rgb(49, 49, 49);
 }
 
 .mega-content section {
+  display: table-row;
+  background: linear-gradient(to bottom, #19b123, #139c19);
+}
+
+.mega-content section .text-section {
   display: table-cell;
+  width: 300px;
+  vertical-align: top;
+  color: #fff;
+}
+
+.mega-content section img {
+  display: table-cell;
+  width: 300px;
   vertical-align: top;
 }
 
 .mega-content h4 {
-  margin-bottom: 10px;
-  color: #000000;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0 10px 20px;
+  color: #000;
 }
 
 .mega-content a {
   display: block;
-  margin-bottom: 5px;
-  color: #555;
-  transition: color 0.3s ease;
+  text-align: center;
+  color: #fff;
 }
 
 .mega-content a:hover {
   color: #000;
 }
 
-.mega-content img {
-  width: 100%;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
 /******************* LEFT COLUMN *******************/
 .left-column {
   width: 70%;
   display: table-cell;
-  vertical-align: top;
 }
 
 .left-column h2 {
   color: #139c19;
   font-size: 1.8rem;
   white-space: nowrap;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
 }
 
 .title-icon {
@@ -144,23 +151,13 @@ nav li:hover > a {
   text-align: justify;
   color: #777;
   font-style: italic;
-  padding: 20px;
-}
-.globule-text_2{
-  text-align: justify;
-  color: #333;
-  padding: 20px;
-}
-.globule-text_2b{
-  text-align: justify;
-  color: #333;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
 }
 
-.globule-text_3 {
+.globule-text_2, .globule-text_2b, .globule-text_3 {
   text-align: justify;
   color: #333;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
 }
 
 .container {
@@ -172,10 +169,11 @@ nav li:hover > a {
   width: 400px;
   margin-right: 20px;
   margin-bottom: 20px;
+  position: relative;
+  left: -40px; /* garde ce décalage si nécessaire, sinon à ajuster */
 }
 
 .image-block img {
-  display: block;
   width: 100%;
   height: auto;
   box-shadow: 0 4px 6px #9c9c9c;
@@ -195,6 +193,7 @@ nav li:hover > a {
 
 div.container_2 {
   margin-bottom: 20px;
+  padding-right: 40px;
 }
 
 .left-column-text {
@@ -207,14 +206,10 @@ div.container_2 {
 /******************* RIGHT COLUMN *******************/
 .right-column {
   display: table-cell;
-  vertical-align: bottom; /* aligner le contenu en bas */
+  vertical-align: bottom;
   width: 30%;
-  padding-right: 30px;
+  padding-bottom: 30px;
   box-shadow: -6px 4px 8px rgba(0,0,0,0.2);
-}
-
-.right-column img {
-  width: auto;
 }
 
 .right-column h2 {
@@ -233,21 +228,23 @@ div.container_2 {
   padding: 0 15px;
 }
 
-/*****************GREEN LINE******************/
+.right-column img {
+  width: auto;
+}
+
+/***************** GREEN LINE *******************/
 main::after {
   content: "";
   display: block;
   height: 1px;
   background-color: #139c19;
-  clear: both;
-} 
+}
 
-/******************* FOOTER  *******************/
+/******************* FOOTER *******************/
 footer {
   color: white;
-  padding: 20px;
   margin-top: 20px;
-  clear: both;
+  margin-bottom: 40px;
 }
 
 footer ul {
@@ -271,5 +268,5 @@ footer a {
 
 footer a:hover {
   color: #000;
-  background: rgb(21, 165, 29, 0.5);
+  background: rgba(21, 165, 29, 0.5);
 }
