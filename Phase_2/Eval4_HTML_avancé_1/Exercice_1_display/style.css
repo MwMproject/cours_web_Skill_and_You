@@ -1,292 +1,269 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /******************* BODY *******************/
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to bottom, #020202, #c2c2c2, #f9f9f9);
-  color: #333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #020202, #c2c2c2, #f9f9f9);
+    color: #333;
 }
 
 /******************* MAIN PAGE *******************/
 .main_page {
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-  background-color: whitesmoke;
-  border-radius: 12px;
-  max-width: 1180px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    max-width: 1180px;
+    box-shadow: 3px 4px 6px #9c9c9c;
 }
 
 .main-content {
-  display: table;
-  width: 100%;
-  padding-right: 40px;
+    width: 100%;
+    padding-right: 40px;
 }
 
 /******************* HEADER *******************/
 header {
-  padding: 20px;
+    padding: 20px 0;
 }
 
 header h1 {
-  text-align: center;
-  color: #139c29;
-  font-size: 5rem;
-  text-shadow: #000 2px 2px 0;
-  letter-spacing: 2px;
+    text-align: center;
+    color: #139c29;
+    font-size: 4.5rem;
+    text-shadow: #000 2px 2px 0;
+    letter-spacing: 2px;
 }
 
 /******************* NAVIGATION *******************/
 header nav {
-  display: table;
-  width: 100%;
-  border-radius: 50px;
-  background: linear-gradient(to bottom, #444, #111);
-  box-shadow: 0 4px 6px #9c9c9c;
+    width: auto;
+    margin: 0 40px;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #444, #111);
+    box-shadow: 0 4px 6px #9c9c9c;
 }
 
 nav ul {
-  display: table-row;
-  list-style: none;
+    display: table-row;
+    list-style: none;
 }
 
 nav li {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
 }
 
 nav a {
-  text-decoration: none;
-  color: #f2f2f2;
-  font-weight: bold;
-  padding: 10px 28px;
-  display: block;
-  text-align: left;
+    text-decoration: none;
+    color: #f2f2f2;
+    font-weight: bold;
+    padding: 10px 28px;
+    display: block;
+    text-align: left;
 }
 
 nav li:hover > a {
-  background-color: #139c19;
-  color: #ffffff;
-}
-
-.dropdown {
-  position: relative;
+    background-color: #139c19;
+    color: #ffffff;
 }
 
 .dropdown:hover .mega-content {
-  display: table;
+    display: table;
 }
 
 .mega-content {
-  display: none;
-  width: 550px;
-  position: absolute;
-  border-left: 10px solid rgb(49, 49, 49);
-  border-bottom: 10px solid rgb(49, 49, 49);
-  border-right: 10px solid rgb(49, 49, 49);
+    display: none;
+    width: 550px;
+    position: absolute;
+    border-left: 10px solid rgb(49, 49, 49);
+    border-bottom: 10px solid rgb(49, 49, 49);
+    border-right: 10px solid rgb(49, 49, 49);
 }
 
 .mega-content section {
-  display: table-row;
-  width: 550px;
-  height: 190px;
-  background: linear-gradient(to bottom, #19b123, #139c19);
+    display: table-row;
+    background: linear-gradient(to bottom, #19b123, #139c19);
 }
 
 .mega-content section .text-section {
-  display: table-cell;
-  width: 300px;
-  vertical-align: top;
-  color: #fff;
+    display: table-cell;
+    width: 300px;
+    vertical-align: top;
+    color: #fff;
 }
 
 .mega-content section .image-block {
-  width: 250px;
-  height: 200px;
-  padding: 0;
-  margin: 0;
+    width: 250px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
 }
 
 .mega-content section .image-block img {
-  height: 103%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+    height: 103%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .mega-content h4 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 20px 0 10px 20px;
-  color: #000;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0 0;
+    color: #000;
 }
 
 .mega-content a {
-  display: block;
-  text-align: center;
-  color: #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 0.5rem;
 }
 
 .mega-content a:hover {
-  color: #000;
+    color: #000;
 }
 
 /******************* LEFT COLUMN *******************/
 .left-column {
-  width: 70%;
-  display: table-cell;
+    width: 70%;
+    display: table-cell;
 }
 
 .left-column h2 {
-  color: #139c19;
-  font-size: 1.8rem;
-  white-space: nowrap;
-  padding: 20px 40px 20px 40px;
+    color: #139c19;
+    font-size: 1.8rem;
+    padding: 30px 40px 0 40px;
 }
 
 .title-icon {
-  width: 28px;
-  height: 35px;
-  background-color: #139c19;
-  border-radius: 100% 0 0 100%;
-  display: inline-block;
-  margin-right: 10px;
-  vertical-align: middle;
+    width: 28px;
+    height: 35px;
+    background-color: #139c19;
+    border-radius: 100% 0 0 100%;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .globule-text_1 {
-  text-align: justify;
-  color: #777;
-  font-style: italic;
-  padding: 20px 40px 20px 40px;
+    text-align: justify;
+    color: #777;
+    font-style: italic;
+    padding: 20px 40px;
 }
 
 .globule-text_2,
 .globule-text_2b,
 .globule-text_3 {
-  text-align: justify;
-  color: #333;
-  padding: 20px 40px 20px 40px;
-}
-
-.container {
-  overflow: hidden;
+    text-align: justify;
+    color: #333;
+    padding: 20px 40px;
 }
 
 .image-block {
-  float: left;
-  width: 400px;
-  margin-right: 20px;
-  position: relative;
+    float: left;
+    width: 400px;
+    margin-right: 20px;
 }
 
 .image-block img {
-  width: 100%;
-  height: auto;
-  box-shadow: 0 4px 6px #9c9c9c;
+    width: 100%;
+    box-shadow: 0 4px 6px #9c9c9c;
 }
 
 .legend-img {
-  text-align: right;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 8px;
-}
-
-.text-block {
-  overflow: visible;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #777;
 }
 
 div.container_2 {
-  margin-bottom: 20px;
-  padding-right: 40px;
+    margin-bottom: 20px;
+    padding-right: 40px;
 }
 
 div.container_2 .left-column-text {
-  padding-left: 40px;
+    padding-left: 40px;
 }
 
 .left-column-text {
-  text-align: justify;
-  display: table-cell;
-  padding: 0 15px;
-  border-right: 1px solid #ad36a7;
+    text-align: justify;
+    display: table-cell;
+    padding: 0 10px;
+    border-right: 1.5px solid #ad36a7;
+}
+
+.right-column-text {
+    text-align: justify;
+    display: table-cell;
+    padding: 0 10px;
 }
 
 /******************* RIGHT COLUMN *******************/
 .right-column {
-  display: table-cell;
-  vertical-align: bottom;
-  width: 30%;
-  padding-bottom: 30px;
-  box-shadow: -6px 4px 8px rgba(0, 0, 0, 0.2);
+    display: table-cell;
+    vertical-align: bottom;
+    width: 30%;
+    padding-bottom: 30px;
+    box-shadow: -6px 7px 8px rgba(0, 0, 0, 0.2);
 }
 
 .right-column h2 {
-  color: #139c19;
-  margin-left: 20px;
+    color: #139c19;
+    margin-left: 20px;
 }
 
 .right-column p {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-.right-column-text {
-  text-align: justify;
-  display: table-cell;
-  padding: 0 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .right-column img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+    max-width: 100%;
 }
 
 /******************* GREEN LINE *******************/
 main::after {
-  content: "";
-  display: block;
-  height: 1px;
-  margin: 0px 40px 0px 40px;
-  background-color: #139c19;
+    content: "";
+    display: block;
+    height: 1.1px;
+    margin: 0 40px;
+    background-color: #139c19;
 }
 
 /******************* FOOTER *******************/
 footer {
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 40px;
+    color: white;
+    margin: 30px 0 40px 0;
 }
 
 footer ul {
-  display: table;
-  margin: 0 auto;
-  list-style: none;
+    display: table;
+    margin: 0 auto;
+    list-style: none;
+    padding-bottom: 20px;
 }
 
 footer ul li {
-  display: table-cell;
-  padding: 0 10px;
+    display: table-cell;
+    padding: 0 5px;
 }
 
 footer a {
-  color: #e9f6e9;
-  text-decoration: none;
-  padding: 10px 35px;
-  background: linear-gradient(to right, #19b123, #139c19);
-  border-radius: 50px;
+    color: #e9f6e9;
+    text-decoration: none;
+    padding: 10px 35px;
+    background: linear-gradient(to right, #19b123, #139c19);
+    border-radius: 50px;
 }
 
 footer a:hover {
-  color: #000;
-  background: rgba(21, 165, 29, 0.5);
+    color: #000;
+    background: rgba(21, 165, 29, 0.5);
 }
