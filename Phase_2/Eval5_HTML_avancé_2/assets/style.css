@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    max-width: 1200px;
+}
+
+/* header */
+header {
+    display: flex;
+    height: 800px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: url(/assets/img/bkg.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    
+}
+
+.logo p {
+    font-size: 0.9rem;
+}
+
+.menu-toggle img {
+    
+}
