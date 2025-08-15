@@ -15,18 +15,19 @@
             <h1>d-angle</h1>
             <p>a responsive answer</p>
         </div>
-        <button class="menu-toggle" aria-label="Ouvrir le menu">
-            <img src="assets/img/burg.png" alt="Menu">
-        </button>
-
-        <nav id="main-menu">
-            <ul>
-                <li>Projets</li>
-                <li>Pricing</li>
-                <li>Tower</li>
-                <li>Contacts</li>
-            </ul>
-        </nav>
+        <details class="menu">
+            <summary class="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="visually-hidden">Menu</span>
+            </summary>
+            <nav id="dropdown">
+                <ul>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Tower</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </details>
     </header>
 
     <main class="container">
