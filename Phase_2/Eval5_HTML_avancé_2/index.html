@@ -17,9 +17,14 @@
         </div>
         <details class="menu">
             <summary class="menu-toggle" aria-label="Ouvrir le menu">
-                <span class="visually-hidden">Menu</span>
+                <span class="menu-text">menu</span>
+                <span class="burger-icon"></span>
             </summary>
             <nav id="dropdown">
+                <button class="close-menu" onclick="this.closest('details').removeAttribute('open')">
+                    <span class="close-text">fermer</span>
+                    <span class="close-icon"></span>
+                </button>
                 <ul>
                     <li><a href="#">Projets</a></li>
                     <li><a href="#">Pricing</a></li>
