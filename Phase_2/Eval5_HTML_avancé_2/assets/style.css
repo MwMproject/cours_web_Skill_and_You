@@ -28,7 +28,7 @@ header {
 
 .logo h1 {
     font-size: 2rem;
-    margin-top: 60px;
+    margin-top: 90px;
 }
 .logo p {
     font-size: 0.9rem;
@@ -119,7 +119,6 @@ header {
 
 /********** CONTAINER **********/
 .container {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -127,6 +126,8 @@ header {
 .row {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
 }
 
 [class^="col-"] {
@@ -166,4 +167,72 @@ article a {
 
 article a:hover {
     color: #f00;
+}
+
+/********** FORMULAIRE **********/
+.form-section {
+    background: url('/assets/img/bkg-form.jpg') center/cover no-repeat;
+     padding: 60px 20px;
+}
+.form-section h2 {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    color: #669;
+}
+.form-section form {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(250, 250, 250, 0.5);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #669;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6f6e73;
+    border-radius: 6px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.form-group textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    border: 1px solid #6f6e73;
+    border-radius: 6px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.form-buttons {
+    grid-column: 1 / 3;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-buttons button {
+    width: 200px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-envoyer {
+    background: linear-gradient(to bottom, #b9bbde, #669);
+}
+.btn-envoyer:hover, .btn-reset:hover {
+    background: linear-gradient(to bottom, #666, #444);
+}
+.btn-reset {
+    background: linear-gradient(to bottom, #b8babb, #6f6e73);
 }
