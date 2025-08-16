@@ -5,11 +5,12 @@
 }
 body {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
     line-height: 1.25;
     background-color: #fff;
     color: #333;
 }
+
 /************ HEADER ***********/
 header {
     background: url('/assets/img/bkg.jpg') center/cover no-repeat;
@@ -22,16 +23,17 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 20px;
 }
 
 .logo h1 {
     font-size: 2rem;
-    margin-bottom: 10px;
     margin-top: 60px;
 }
 .logo p {
     font-size: 0.9rem;
 }
+
 /********** MENU **********/
 .menu { 
     position: absolute;
@@ -59,6 +61,7 @@ header {
 .menu[open] .burger-icon { 
     background-position: 0 -20px; 
 }
+
 /*********** DROPDOWN *********/ 
 #dropdown { 
     position: fixed; 
@@ -69,6 +72,7 @@ header {
     align-items: center; 
     justify-content: center; 
     pointer-events: none; 
+     opacity: 0;
     transform: scale(1.05); 
     transition: all 0.4s ease; 
 } 
@@ -110,5 +114,56 @@ header {
 .close-icon { 
     width: 60px; 
     height: 60px; 
-    background: url('/assets/img/burg.png') no-repeat 0 -18px; }
+    background: url('/assets/img/burg.png') no-repeat 0 -18px; 
+}
 
+/********** CONTAINER **********/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* GRID SYSTEM */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class^="col-"] {
+    padding: 40px 20px;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+}
+
+.col-4 {
+    flex: 0 0 33.3333%;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+article h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+article p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+article a {
+    color: #549ff3;
+    text-decoration: none;
+}
+
+article a:hover {
+    color: #f00;
+}
