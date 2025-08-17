@@ -36,7 +36,7 @@ header {
 
 /********** MENU **********/
 .menu {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
 }
@@ -296,4 +296,78 @@ article a:hover {
 }
 .footer-col li:hover::before {
     background-color: rgba(120, 120, 120, 0.8);
+}
+
+/********** MEDIA QUERIES **********/
+@media screen and (max-width: 480px) {
+  .col-3, .col-4, .col-6 {
+    flex: 0 0 100%;
+  }
+  .form-section form {
+    grid-template-columns: 1fr;
+  }
+  .form-buttons {
+    grid-column: 1 / -1;
+  }
+  .site-footer {
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+  }
+  .footer-col {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col-6 {
+    flex: 0 0 100%;
+  }
+
+  .col-6:last-child {
+    flex: 0 0 50%;
+    order: 1;
+  }
+
+  .col-4:nth-child(1) {
+    flex: 0 0 50%;
+    order: 2;
+    margin-top: -60.5%;
+    margin-left: 50%;
+  }
+
+  .col-4:nth-child(2),
+  .col-4:nth-child(3) {
+    flex: 0 0 33.33333%;
+    order: 3;
+  }
+
+  .col-3 {
+    flex: 0 0 33.33333%;
+    order: 5;
+  }
+
+  .col-3:nth-child(1) {
+    order: 4;
+    margin-top: -54%;
+    margin-left: 66.66666%;
+  }
+
+  .form-group textarea {
+    height: 200px;
+  }
+
+  .site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
 }
