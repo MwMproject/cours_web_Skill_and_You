@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css?family=Chela+One|BenchNine');
+/*--- FONTS ---*/
+
+/*--- BASE ---*/
+*{
+	box-sizing: border-box;
+}
+html {
+	font-size: 1.25em;
+}
+body{
+	font-family: 'BenchNine', sans-serif;
+	font-size: 1em;
+  	line-height: 1.5em;
+
+}
+/*liens*/
+a {
+	text-decoration: none;
+	color: #ae2123;
+}
+a:hover {
+	color: #999;
+}
+/*grilles verticale em*/
+
+h1, .h1 {
+  font-size: 2.4em;
+  line-height: 1.25em;
+  margin-top: 0.625em;
+  margin-bottom: 1.25em;
+}
+h2, .h2 {
+  font-size: 1.8em;
+  line-height: 1.66666667em;
+  margin-top: 0.83333333em;
+  margin-bottom: 0.83333333em;
+}
+h3, .h3 {
+  font-size: 1.35em;
+  line-height: 1.11111111em;
+  margin-top: 1.11111111em;
+  margin-bottom: 0em;
+}
+h4, .h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+}
+h5, .h5 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+}
+p, ul, ol {
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+}
+ul ul, ol ol, ul ol, ol ul, .no-margin {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/*images responsive*/
+
+img {max-width: 100%}
+
+
+/*classes utiles*/
+.ital {
+	font-style: italic;
+}
+.center {
+	text-align: center;
+	justify-content: center;
+}
+.pd-m {
+	padding: 1.5em
+}
+
+/*wrapper header*/
+
+.wrapper {
+	  	max-width: 1850px;
+	  	margin:0 auto;
+	  	padding:1vh 1vw 0 1vw;
+}
+
+.main-header{
+	padding: 5vh 0 0 0;
+}	
+
+.logo {
+	flex:0 0 18%;
+	max-width: 250px;
+	align-self: center;
+}
+.slogan {
+	flex:0 0 auto;
+	align-self: center;
+	text-align: center;
+}
+.slogan h1 {
+	color: #527bea;
+	font-family: 'Chela One', cursive;
+}
+.main-nav-wrapper {
+	flex:0 0 100%;
+}
+.main-nav {
+	margin: 1.5em 0 1em 0;
+	background:#ae2123;
+	padding: 0.25em 1vw;
+}
+
+.main-nav a {
+	display: block;
+	text-decoration: none;
+	color:#fff;
+	margin-right: 1em;
+	padding: 0em 0.5em;
+	line-height: 1.5em;
+
+}
+.main-nav a:hover {
+	color:#999;
+}
+
+.search input {
+	border:1px solid #ae2123;
+	padding: 0em 0.5em;
+	line-height: 1.5em;
+	margin-left: auto;
+}
+
+[placeholder] {
+	/*color:#ae2123;*/
+	font-size: 1em;
+	font-family: 'BenchNine', sans-serif;
+	border-radius: 1em;
+}
+
+/*--- blocs de contenu ---*/
+
+.wrap-section {
+	box-shadow: 2px 2px 6px #566F7E;
+	padding: .75em;
+	background-color: hsla(79, 100%, 88%, 0.35);
+	background: rgba(100%, 100%, 100%, 0.2);
+	justify-content: space-between;
+	box-shadow: 2px 2px 6px #566F7E;
+}
+.box-header {
+	flex:0 1 100%;
+}
+.box-header h2 {
+	color: #fff;
+	padding:0em 1.5em;
+	margin-top: 0;
+	background: #ae2123;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+
+/*--- bt à la une ---*/
+
+.wrap-btn{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	}
+
+
+.hide-border-bkg {
+	border:none;
+	background:transparent;
+}
+
+/*lire la suite*/
+.link {
+	display: inline-block;
+	margin-left: 1em;
+}
+.btn {
+	display: inline-block;
+	text-align: center;
+	margin: 0.5em 1.5em;
+	border-radius: 2em;
+	padding: .75em 2em;
+	text-decoration: none;
+	font-size: 1em;
+	background:#527bea;;
+	color:#fff;
+}
+.btn:hover {
+	background:#BAF1CB;
+}
+
+/*--- table ---*/
+.table{
+	border-collapse: collapse;
+}
+.table {
+	text-align: center;
+	width: 100%;
+}
+.table tr:nth-child(even){
+	background-color: #858585;
+	color: white;
+}
+.table th{
+	background-color:#527bea;
+	color: white;
+}
+
+/*porfolio*/
+.portfolio {
+	position: relative;
+}
+
+.portfolio-pan {
+	position: absolute;
+	display: flex;
+	margin:1.5em;
+	border:1px solid #fff;
+	background-color: hsla(100,0%, 100%,0.5);
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+.portfolio:hover .portfolio-pan {
+	display: flex;
+}
+.portfolio-link {
+	margin:auto;
+	font-size: 1em;
+	font-weight: bold;
+	/*color:;*/
+	color: #fff;
+	padding:.5em 1.5em;
+	background: #ae2123;
+	display: inline-block;
+	font-weight: bold;
+}
+.portfolio-link:hover {
+	background:  hsla(0,0%,0%,0.5);
+	color:#fff;
+}
+/*ordre dernière rangée*/
+.affiche {
+	order: -1;
+}
+/*footer*/
+
+footer{
+	background-color: #ededed;
+}
+.footer-list li {
+	font-size: 1em;
+	color:#222;
+	flex:1 1 155px;
+}
+
+/*flexbox*/
+
+.flex-container {
+	display: flex;
+}
+.xs-column-xl-row {
+	flex-direction: column;
+}
+.column {
+	flex-direction: column;
+}
+
+.row-wrap {
+	flex-flow: row wrap;
+}
+.wrap {
+	flex-wrap: wrap;
+}
+.space-around {
+	justify-content: space-around;
+}
+.space-between {
+	justify-content: space-between;
+}
+
+.xs-col-1 {
+	width: calc((100% / 12) * 1);
+}
+.xs-col-2 {
+	width: calc((100% / 12) * 2);
+}
+.xs-col-3 {
+	width: calc((100% / 12) * 3);
+}
+.xs-col-4 {
+	width: calc((100% / 12) * 4);
+}
+.xs-col-5 {
+	width: calc((100% / 12) * 5);
+}
+.xs-col-6 {
+	width: calc((100% / 12) * 6);
+}
+.xs-col-7 {
+	width: calc((100% / 12) * 7);
+}
+.xs-col-8 {
+	width: calc((100% / 12) * 8);
+}
+.xs-col-9 {
+	width: calc((100% / 12) * 9);
+}
+.xs-col-10 {
+	width: calc((100% / 12) * 10);
+}
+.xs-col-11 {
+	width: calc((100% / 12) * 11);
+}
+.xs-col-12 {
+	width: calc((100% / 12) * 12);
+}
+
+/*grille*/
+
+.grid-container { 
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-gap: 1.25em 1em;
+		grid-auto-rows:minmax(40px, auto);
+		padding-bottom:1.5em;
+	}
+.grid-xs-col-8 {
+	grid-column:span 8;
+}
+/*remarque, on on n'a qu'un mode de présentation de grille 
+les autres largeurs sont gérées par flexbox, par contre 
+on fera la grille complète après la media query
+*/
+
+@media screen and (min-width: 940px) {
+		
+	html {
+		font-size: 1.5em;
+	}	
+	.slogan {
+	flex:0 0 auto;
+	align-self: center;
+	text-align: right;
+	}
+
+	.footer-list li{
+		flex:1 1 33%;
+	}
+	.search input {
+		margin: 0;
+		width: auto;
+	}
+
+	/*colonne flexbox*/
+
+	.xl-col-1 {
+		width: calc((100% / 12) * 1);
+	}
+	.xl-col-2 {
+		width: calc((100% / 12) * 2);
+	}
+	.xl-col-3 {
+		width: calc((100% / 12) * 3);
+	}
+	.xl-col-4 {
+		width: calc((100% / 12) * 4);
+	}
+	.xl-col-5 {
+		width: calc((100% / 12) * 5);
+	}
+	.xl-col-6 {
+		width: calc((100% / 12) * 6);
+	}
+	.xl-col-7 {
+		width: calc((100% / 12) * 7);
+	}
+	.xl-col-8 {
+		width: calc((100% / 12) * 8);
+	}
+	.xl-col-9 {
+		width: calc((100% / 12) * 9);
+	}
+	.xl-col-10 {
+		width: calc((100% / 12) * 10);
+	}
+	.xl-col-11 {
+		width: calc((100% / 12) * 11);
+	}
+	.xl-col-12 {
+		width: calc((100% / 12) * 12);
+	}
+	/*gouttières*/
+	.xl-gutter-right {
+	margin-right: 1%;
+	}
+	.xl-gutter-left {
+	margin-left: 1%;
+
+	}
+	/*passage d'une présentation à l'autre*/
+	.xs-column-xl-row {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.nowrap {
+		flex-wrap: nowrap;
+	}
+
+	.xl-column {
+		flex-direction: column;
+	}
+	.search {
+		margin-left:auto;
+	}	
+	/*la grille CSS Layout*/
+	/*les rangées*/
+	.grid-xl-row-2 {
+			grid-row:span 2;
+		}
+	.grid-xl-row-3 {
+			grid-row:span 3;
+		}
+	.grid-xl-row-4 {
+			grid-row:span 4;
+		}
+	/*on a pas besoin de plus ici, sauf a avoir une colonne très haute*/
+	.grid-xl-col-2 {
+			grid-column:span 2;
+		}
+	.grid-xl-col-3 {
+			grid-column:span 3;
+		}
+	.grid-xl-col-4 {
+			grid-column:span 4;
+		}
+	.grid-xl-col-5 {
+			grid-column:span 5;
+		}
+	.grid-xl-col-6 {
+			grid-column:span 6;
+		}
+	.grid-xl-col-7 {
+			grid-column:span 7;
+		}
+	.grid-xl-col-8 {
+			grid-column:span 8;
+		}
+}
