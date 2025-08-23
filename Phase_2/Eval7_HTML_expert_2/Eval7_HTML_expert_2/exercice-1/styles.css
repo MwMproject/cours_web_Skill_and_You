@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	margin:0;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color:#CCC;
+	font-size: 1em;
+}
+p {
+	font-size: .8em;
+}
+
+/***************** flottements ************************/
+.colonne {
+	float:left;
+}
+.clear {
+	clear:both;
+
+}
+/*******************wrapper et header*****************/
+
+#wrapper {
+	width:990px;
+	margin:0 auto;	
+	background-color:#FFF;
+}
+#header #logo {
+	width:280px;
+}
+#header #pub h1 {
+	width:690px;
+	background-color:#F90;
+	text-align:center;
+	padding:0 10px;
+	vertical-align: middle;
+	line-height: 96px;
+}
+
+
+/*********************menu****************************************/
+ul#menu_horizontal {
+     margin: 1em 0px 0px 0px;
+     padding: 0px;
+	text-align: center;
+}
+ul#menu_horizontal li {
+	display: inline-block;
+	list-style:none;
+}
+ul#menu_horizontal li a {
+	color:red;
+	display:block;
+	padding:10px;	
+	text-decoration:none;
+	text-align:center;
+	border-radius:10px 10px 0 0;
+	width: 120px;
+	margin:0 10px 0 0;	
+	background-color:#FF0;
+	border: thin solid orange;
+	
+}
+ul#menu_horizontal a:hover {
+     background-color: #FF9900;
+     color: black;
+}	
+/*******contenu et colonnes********/
+
+
+#contenu {
+	display: flex;
+	justify-content: space-between;
+}
+#contenu_centre {
+	width:50%;
+	margin:10px 0 0 0;
+	padding:10px;	
+	background-color:#FF0
+}
+
+#contenu_gauche, #contenu_droite {
+	width:22%;	
+	margin:10px;
+	min-height:500px;
+	background-color:orange;
+}
+
+/*******colonne gauche********/
+#contenu_gauche .bloc {
+	padding: 0 5px 10px 10px;
+	margin-top:10px;
+	font-size: 0.8em;
+	}
+#contenu_gauche .bloc h3 {
+	background: #fff;
+	padding: 0.2em;
+	text-align: center;
+	margin-bottom: 0.5em;
+	}
+#contenu_gauche .bloc span {
+		color: #3B4EA1;
+	}
+
+/*******colonne centre********/
+
+#contenu_centre  .align_droite {
+	float:right;
+	margin:0 0 10px 10px
+}
+#vignettes {
+	margin:1em 0 0 0;
+	padding: 0 1% 0 1%;
+	text-align: center;
+}
+
+#vignettes .vignette {
+	width:30%;
+	height:150px;
+	margin:0 1% 0 1%;
+	border:#000 3px solid;
+	display: inline-block;
+}
+
+/********************colonne droite*************************/
+#actualites {
+	height:250px;
+	border-radius:10px;
+	overflow:auto;
+	background-color:#CCC;
+	margin:5px;
+	padding:10px;
+}
+
+#actualites h2 {
+	text-align: center;
+}
+#actualites .bloc {
+	border-bottom:1px solid #ac9068;
+	padding: 0 5px 10px 10px;
+	margin-top:10px;
+	font-size: 0.8em;
+	}
+#actualites .bloc h3 {
+	font-weight: bold;
+	font-size: 12px;
+	font-weight: bold;
+	margin:0 0 3px 0;
+}
+#actualites .bloc span {
+	color:#d48940;font-weight: bold;
+}
+
+
+/***********footer**********************/
+
+#footer {	
+	text-align:right;
+	padding:10px;
+	font-size:10px;
+	background-color:red;
+	border-top:#000 thin solid;
+	
+}

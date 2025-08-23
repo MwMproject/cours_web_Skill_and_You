@@ -1,0 +1,276 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*grilles verticale rem*/
+/* line 4, ../sass/_typo.scss */
+html {
+  font-size: 1.25em;
+}
+
+/* line 7, ../sass/_typo.scss */
+body {
+  font-family: 'BenchNine', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* line 13, ../sass/_typo.scss */
+h1, .h1 {
+  font-size: 3rem;
+  line-height: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5em;
+}
+
+/* line 19, ../sass/_typo.scss */
+h2, .h2 {
+  font-size: 2.4rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 25, ../sass/_typo.scss */
+h3, .h3 {
+  font-size: 1.35rem;
+  line-height: 1.3rem;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* line 33, ../sass/_typo.scss */
+p, ul, ol {
+  line-height: 1.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* line 38, ../sass/_typo.scss */
+ul ul, ol ol, ul ol, ol ul, .no-margin {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/* line 3, ../sass/_global.scss */
+html {
+  font-size: 1.25em;
+}
+
+/* line 6, ../sass/_global.scss */
+body {
+  font-family: 'BenchNine', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  background: #ededed;
+}
+
+/*liens*/
+/* line 14, ../sass/_global.scss */
+a {
+  text-decoration: none;
+  color: #ae2123;
+}
+
+/* line 18, ../sass/_global.scss */
+a:hover {
+  color: #999;
+}
+
+/*images responsive*/
+/* line 24, ../sass/_global.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 26, ../sass/_global.scss */
+.wrapper {
+  width: 95%;
+  max-width: 1550px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* line 1, ../sass/_header.scss */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+/* line 8, ../sass/_header.scss */
+.header-title {
+  padding-right: 1rem;
+  margin: 0;
+}
+
+/* line 15, ../sass/_header.scss */
+.menu {
+  background: #543973;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+}
+
+/* line 24, ../sass/_header.scss */
+.menu-item {
+  list-style: none;
+}
+/* line 26, ../sass/_header.scss */
+.menu-item a {
+  background: #3B2851;
+  padding: 10px 20px;
+  margin: 1px 0px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+/* line 33, ../sass/_header.scss */
+.menu-item a:hover {
+  background: #6d4a95;
+  color: #d4c7e4;
+}
+
+/* line 2, ../sass/_main.scss */
+main {
+  background: #fff;
+  padding-top: 1.5rem;
+}
+
+/* line 6, ../sass/_main.scss */
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+}
+
+/* line 11, ../sass/_main.scss */
+.article {
+  flex: 0 0 44%;
+}
+
+/* line 14, ../sass/_main.scss */
+.bt {
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+/* line 18, ../sass/_main.scss */
+.bt a {
+  color: #fff;
+  display: block;
+  background-color: #3B2851;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+}
+/* line 24, ../sass/_main.scss */
+.bt a:hover {
+  background: #6d4a95;
+  color: #cccccc;
+}
+
+/* line 32, ../sass/_main.scss */
+.containerVignettes {
+  padding: 1.5rem;
+  box-shadow: -1px -1px 20px 10px #ededed;
+}
+
+/* line 36, ../sass/_main.scss */
+.vignette {
+  position: relative;
+  flex: 0 0 29%;
+}
+
+/* line 40, ../sass/_main.scss */
+.vignette-figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: none;
+  columns: #ededed;
+  padding: 1rem;
+}
+
+/* line 50, ../sass/_main.scss */
+.vignette:hover .vignette-figcaption {
+  display: block;
+}
+
+/* line 2, ../sass/_footer.scss */
+.main-footer {
+  padding: 1rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  justify-content: center;
+}
