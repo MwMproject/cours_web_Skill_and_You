@@ -13,7 +13,7 @@ body {
 
 /************ HEADER ***********/
 header {
-    background: url('/assets/img/bkg.jpg') center/cover no-repeat;
+    background: url('img/bkg.jpg') center/cover no-repeat;
     min-height: 500px;
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,7 @@ header {
     width: 60px;
     height: 60px;
     display: inline-block;
-    background: url('/assets/img/burg.png') no-repeat 0 25px;
+    background: url('img/burg.png') no-repeat 0 25px;
 }
 
 .menu[open] .burger-icon {
@@ -131,7 +131,7 @@ header {
 .close-icon { 
     width: 60px; 
     height: 60px; 
-    background: url('/assets/img/burg.png') no-repeat 0 -18px; 
+    background: url('img/burg.png') no-repeat 0 -18px; 
 }
 
 /********** CONTAINER **********/
@@ -190,7 +190,7 @@ article a:hover {
 
 /********** FORMULAIRE **********/
 .form-section {
-    background: url('/assets/img/bkg-form.jpg') center/cover no-repeat;
+    background: url('img/bkg-form.jpg') center/cover no-repeat;
     padding: 60px 20px;
 }
 .form-section h2 {
