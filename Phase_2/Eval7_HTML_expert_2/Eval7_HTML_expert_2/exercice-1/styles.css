@@ -14,7 +14,7 @@ p {
 }
 
 /***************** flottements ************************/
-.colonne {
+.logo-header, .pub-header {
 	float:left;
 }
 .clear {
