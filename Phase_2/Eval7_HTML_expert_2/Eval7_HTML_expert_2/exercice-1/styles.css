@@ -23,15 +23,15 @@ p {
 }
 /*******************wrapper et header*****************/
 
-#wrapper {
+.wrapper {
 	width:990px;
 	margin:0 auto;	
 	background-color:#FFF;
 }
-#header #logo {
+.logo-header {
 	width:280px;
 }
-#header #pub h1 {
+.pub-header h1 {
 	width:690px;
 	background-color:#F90;
 	text-align:center;
@@ -42,16 +42,16 @@ p {
 
 
 /*********************menu****************************************/
-ul#menu_horizontal {
+.nav-menu {
      margin: 1em 0px 0px 0px;
      padding: 0px;
 	text-align: center;
 }
-ul#menu_horizontal li {
+.nav-menu li {
 	display: inline-block;
 	list-style:none;
 }
-ul#menu_horizontal li a {
+.nav-menu li a {
 	color:red;
 	display:block;
 	padding:10px;	
@@ -64,25 +64,25 @@ ul#menu_horizontal li a {
 	border: thin solid orange;
 	
 }
-ul#menu_horizontal a:hover {
+.nav-menu a:hover {
      background-color: #FF9900;
      color: black;
 }	
 /*******contenu et colonnes********/
 
 
-#contenu {
+.main-container {
 	display: flex;
 	justify-content: space-between;
 }
-#contenu_centre {
+.center-part {
 	width:50%;
 	margin:10px 0 0 0;
 	padding:10px;	
 	background-color:#FF0
 }
 
-#contenu_gauche, #contenu_droite {
+.left-part, .right-part {
 	width:22%;	
 	margin:10px;
 	min-height:500px;
@@ -90,34 +90,34 @@ ul#menu_horizontal a:hover {
 }
 
 /*******colonne gauche********/
-#contenu_gauche .bloc {
+.left-part .bloc {
 	padding: 0 5px 10px 10px;
 	margin-top:10px;
 	font-size: 0.8em;
 	}
-#contenu_gauche .bloc h3 {
+.left-part .bloc h3 {
 	background: #fff;
 	padding: 0.2em;
 	text-align: center;
 	margin-bottom: 0.5em;
 	}
-#contenu_gauche .bloc span {
+.left-part .bloc span {
 		color: #3B4EA1;
 	}
 
 /*******colonne centre********/
 
-#contenu_centre  .align_droite {
+.center-part  .align_droite {
 	float:right;
 	margin:0 0 10px 10px
 }
-#vignettes {
+.vignettes {
 	margin:1em 0 0 0;
 	padding: 0 1% 0 1%;
 	text-align: center;
 }
 
-#vignettes .vignette {
+.vignettes .vignette {
 	width:30%;
 	height:150px;
 	margin:0 1% 0 1%;
@@ -126,7 +126,7 @@ ul#menu_horizontal a:hover {
 }
 
 /********************colonne droite*************************/
-#actualites {
+.actualites {
 	height:250px;
 	border-radius:10px;
 	overflow:auto;
@@ -135,29 +135,29 @@ ul#menu_horizontal a:hover {
 	padding:10px;
 }
 
-#actualites h2 {
+.actualites h2 {
 	text-align: center;
 }
-#actualites .bloc {
+.actualites .bloc {
 	border-bottom:1px solid #ac9068;
 	padding: 0 5px 10px 10px;
 	margin-top:10px;
 	font-size: 0.8em;
 	}
-#actualites .bloc h3 {
+.actualites .bloc h3 {
 	font-weight: bold;
 	font-size: 12px;
 	font-weight: bold;
 	margin:0 0 3px 0;
 }
-#actualites .bloc span {
+.actualites .bloc span {
 	color:#d48940;font-weight: bold;
 }
 
 
 /***********footer**********************/
 
-#footer {	
+.footer {	
 	text-align:right;
 	padding:10px;
 	font-size:10px;
