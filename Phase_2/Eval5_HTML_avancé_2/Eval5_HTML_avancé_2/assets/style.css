@@ -13,8 +13,13 @@ body {
 
 /************ HEADER ***********/
 header {
-    background: url('./img/bkg.jpg') center 38%/cover no-repeat;
-    height: clamp(320px, 55vh, 620px);
+    background-image: url('./img/bkg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 55vh;
+    min-height: 320px;
+    max-height: 620px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -299,6 +304,9 @@ article a:hover {
 
 /********** MEDIA QUERIES **********/
 @media screen and (max-width: 480px) {
+    header {
+        height: 480px;
+    }
     .row article {
         flex: 0 0 100%;
     }
@@ -319,6 +327,9 @@ article a:hover {
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
+    header {
+        height: 685px;
+    }
     .row {
         display: flex;
         flex-wrap: wrap;
