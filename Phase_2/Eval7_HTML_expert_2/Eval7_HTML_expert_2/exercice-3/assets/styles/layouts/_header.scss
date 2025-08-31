@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $space-md;
+
+  &-title {
+    padding-right: $space-sm;
+    margin: 0;
+  }
+}
+
+.menu {
+  background: $color-secondary;
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+  margin: 0;
+  padding: 0;
+
+  &-item {
+    list-style: none;
+
+    a {
+      background: $color-primary;
+      padding: 10px 20px;
+      margin: 1px 0;
+      display: block;
+      text-decoration: none;
+      color: $color-white;
+
+      &:hover {
+        background: $color-hover;
+        color: #d4c7e4;
+      }
+    }
+  }
+}

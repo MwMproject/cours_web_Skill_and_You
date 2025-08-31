@@ -1,0 +1,58 @@
+main {
+  background: $color-white;
+  padding-top: $space-md;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: $space-md;
+}
+
+.article {
+  flex: 0 0 44%;
+}
+
+.bt {
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  a {
+    color: $color-white;
+    display: block;
+    background-color: $color-primary;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+
+    &:hover {
+      background: $color-hover;
+      color: #cccccc;
+    }
+  }
+}
+
+.containerVignettes {
+  padding: $space-md;
+  box-shadow: -1px -1px 20px 10px $color-light;
+
+  .vignette {
+    position: relative;
+    flex: 0 0 29%;
+
+    &-figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.7);
+      display: none;
+      padding: $space-sm;
+
+      .vignette:hover & {
+        display: block;
+      }
+    }
+  }
+}
