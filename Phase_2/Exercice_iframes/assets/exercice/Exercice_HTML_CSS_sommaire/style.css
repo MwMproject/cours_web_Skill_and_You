@@ -1,0 +1,26 @@
+.container {
+    width: 250px;
+    margin: 20px auto;
+    border: 10px double #55557f; border-radius: 10px;
+    padding: 10px;
+}
+.container h1 {
+    text-align: center;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px black, 5px 5px 0.2em rgb(199,70,61), -5px -5px 0.2em rgb(36,70,124);
+}
+.sommaire{
+    list-style-type: upper-roman;
+    padding-left: 0px;
+    list-style-position: inside;
+}
+.sommaire ol{
+    list-style-type: lower-alpha;
+    margin-top: 1em;
+}
+.sommaire ul{
+    list-style-type: disc;
+    margin-top: 1em;
+}

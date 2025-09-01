@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parallax_1">
+        <div class="caption">
+            <span class="border">Scroll Down</span>
+        </div>
+    </div>
+    <div class="text">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem odit ducimus suscipit nihil excepturi doloribus tenetur hic perspiciatis laudantium dicta, nostrum, necessitatibus architecto earum. Impedit harum ipsum repellat saepe voluptatem! Rerum suscipit cupiditate illo eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos veritatis accusantium repellat laudantium possimus excepturi voluptate ducimus pariatur Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis natus libero amet culpa voluptas delectus quaerat animi quos maiores, optio minima dolores. Soluta culpa, iusto officiis ad modi repellendus.
+        </p>
+    </div>
+    <div class="parallax_2">
+        <div class="caption">
+            <span class="border">Scroll Down</span>
+        </div>
+    </div>
+    <div class="text">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem odit ducimus suscipit nihil excepturi doloribus tenetur hic perspiciatis laudantium dicta, nostrum, necessitatibus architecto earum. Impedit harum ipsum repellat saepe voluptatem! Rerum suscipit cupiditate illo eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos veritatis accusantium repellat laudantium possimus excepturi voluptate ducimus pariatur hic.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis natus libero amet culpa voluptas delectus quaerat animi quos maiores, optio minima dolores. Soluta culpa, iusto officiis ad modi repellendus.
+        </p>
+    </div>
+    <div class="parallax_3">
+        <div class="caption">
+            <span class="border">Scroll Down</span>
+        </div>
+    </div>
+    <div class="text">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem odit ducimus suscipit nihil excepturi doloribus tenetur hic perspiciatis laudantium dicta, nostrum, necessitatibus architecto earum. Impedit harum ipsum repellat saepe voluptatem! Rerum suscipit cupiditate illo eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos veritatis accusantium repellat laudantium possimus excepturi voluptate ducimus pariatur hic.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis natus libero amet culpa voluptas delectus quaerat animi quos maiores, optio minima dolores. Soluta culpa, iusto officiis ad modi repellendus.
+        </p>
+        </div>
+        <div class="parallax_1">
+        <div class="caption">
+            <span class="border">Scroll Up</span>
+    </div>
+</body>
+</html>

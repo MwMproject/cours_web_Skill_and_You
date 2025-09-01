@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sommaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <h1>Sommaire</h1>
+            <ol class="sommaire">
+                <li>Géographie
+                    <ul>
+                        <li>Belgique</li>
+                        <li>France</li>
+                        <li>Italie</li>
+                    </ul>
+                </li>
+                <hr/>
+                <li>Toponymie
+                    <ul>
+                        <li>Belgique</li>
+                        <li>France</li>
+                        <li>Italie</li>
+                    </ul>
+                </li>
+                <hr/>
+                <li>Histoire</li>
+                <ul>
+                    <li>Belgique</li>
+                    <li>France
+                        <ol>
+                            <li>Préhistoire</li>
+                            <li>Moyen Âge</li>
+                            <li>Renaissance</li>
+                        </ol>
+                    </li>
+                    <li>Italie</li>
+                </ul>
+            </ol>
+        </div>
+    </body>
+</html>
