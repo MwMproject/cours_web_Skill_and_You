@@ -6,44 +6,63 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
-    line-height: 1.25;
-    background: linear-gradient(to left, #b1b2b3, #292929);
-    color: #000000;
+    line-height: 1.5;
+    background: linear-gradient(to left, #646464, #919192);
+    color: #000;
+    padding: 20px;
 }
-h1{
+
+h1 {
     text-align: center;
     margin: 20px 0;
+    font-size: 2em;
+    color: #dddbdb;
+    text-shadow: #333 6px 7px 6px;
 }
-.navbar{
+h1 a {
+    font-size: 0.5em;
+    text-decoration: none;
+    color: #8598ca;
+}
+.navbar {
     text-align: center;
-    margin-bottom: 20px;
-    background: linear-gradient(to left, #292929, #b1b2b3);
-    border-radius: 20px;
+    margin: 30px auto;
+    background: linear-gradient(to left, #919192, #646464);
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 800px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-.navbar a{
+.navbar a {
     display: inline-block;
     padding: 10px 15px;
     text-decoration: none;
-    color: black;
+    color: #252525;
     font-weight: bold;
+    transition: background 0.3s ease;
+    border-radius: 4px;
 }
-h1 a{
-    font-size: 0.5em;
+.navbar a:hover {
+    background: rgba(0, 0, 0, 0.459);
+    color: #ffffff;
 }
-
-.left-part, .right-part{
+.left-part, .right-part {
     width: 49%;
     display: inline-block;
     vertical-align: top;
+    padding: 10px;
 }
-
-.left-part iframe, .right-part iframe{
-    height: 800px;
+.left-part iframe, .right-part iframe {
+    height: 550px;
     width: 100%;
-    border: 1px solid black;
+    border: 2px solid #333;
+    border-radius: 4px;
 }
-.left-part h2, .right-part h2{
+.left-part h2, .right-part h2 {
     text-align: center;
     margin-bottom: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    color: #fff;
 }
