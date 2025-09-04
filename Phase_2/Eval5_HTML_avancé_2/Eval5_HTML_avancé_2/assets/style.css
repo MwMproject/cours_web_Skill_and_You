@@ -380,7 +380,7 @@ article a:hover {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    .site-footer .container {
+    .footer-links {
         grid-template-columns: repeat(2, 1fr);
     }
 }
