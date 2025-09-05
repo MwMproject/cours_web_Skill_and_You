@@ -8,7 +8,7 @@
     color: white;
     font-size: 1.2em;
     padding: 32px;
-    margin: 32px;
+    margin: 54px;
 }
 .btn {
     display: inline-block;
@@ -36,6 +36,7 @@
 }
 .top {
     width: 100%;
+    position: fixed;
 }
 .top:hover {
     background-color: rgba(0, 0, 0, 1);
@@ -43,11 +44,28 @@
 .left {
     float: left;
     width: 33%;
+    margin-top: 200px;
 }
 .right {
     float: right;
     width: 33%;
+    margin-top: 200px;
 }
 h1 {
 border-bottom: 1px solid white;
+}
+h1, p {
+    margin-bottom: 20px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }

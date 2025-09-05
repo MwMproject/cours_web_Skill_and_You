@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="acceuil">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 <body>
     <div class="container top">
         <div class="nav-btn">
-            <a href="#"><div class="btn menu">Acceuil</div></a>
+            <a href="#acceuil"><div class="btn menu">Acceuil</div></a>
             <a href="#titre1"><div class="btn menu">Titre 1</div></a>
             <a href="#titre2"><div class="btn menu">Titre 2</div></a>
             <a href="#titre3"><div class="btn menu">Titre 3</div></a>
@@ -17,22 +17,25 @@
         </div>
     </div>
     <div class="container left">
-           <h1>Titre 1</h1> 
+           <h1 id="titre1">Titre 1</h1> 
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia, nihil obcaecati quo aliquid placeat enim quasi facilis nobis, ratione inventore ipsa optio similique. Porro vel velit totam maxime dolor!</p>
-           <h1>Titre 2</h1> 
+           <h1 id="titre2">Titre 2</h1> 
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia, nihil obcaecati quo aliquid placeat enim quasi facilis nobis, ratione inventore ipsa optio similique. Porro vel velit totam maxime dolor!</p>
-           <h1>Titre 3</h1> 
+           <h1 id="titre3">Titre 3</h1> 
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia, nihil obcaecati quo aliquid placeat enim quasi facilis nobis, ratione inventore ipsa optio similique. Porro vel velit totam maxime dolor!</p>
-           <h1>Titre 4</h1> 
+           <h1 id="titre4">Titre 4</h1> 
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia, nihil obcaecati quo aliquid placeat enim quasi facilis nobis, ratione inventore ipsa optio similique. Porro vel velit totam maxime dolor!</p>
         </div>
         <div class="container right">
             <h1>Shibuya</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolorum iusto nulla, eveniet ad voluptates earum soluta aliquid quidem reiciendis corporis nemo veritatis illum itaque, praesentium molestias reprehenderit sint asperiores?</p>
             <div class="nav-btn">
-                <div class="btn player">Start</div>
-                <div class="btn player">Pause</div>
+                <div class="btn player" onclick="document.getElementById('shibuya').play()">Start</div>
+                <div class="btn player" onclick="document.getElementById('shibuya').pause()">Pause</div>
             </div>
         </div>
+    <video autoplay muted loop id="shibuya">
+        <source src="assets/vidéo_Shibuya.mp4" type="video/mp4"/>      
+    </video>
 </body>
 </html>
