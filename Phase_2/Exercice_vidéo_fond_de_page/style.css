@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1.2em;
+    padding: 32px;
+    margin: 32px;
+}
+.btn {
+    display: inline-block;
+    font-size: 1em;
+    text-align: center;
+    background-color: rgba(244, 255, 255, 0.3);
+    margin: 10px;
+    padding: 15px;
+    min-width: 85px;
+}
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.menu {
+    width: 10%;
+}
+.player {
+    width: 40%;
+}
+    
+.nav-btn {
+    text-align: center;
+}
+.top {
+    width: 100%;
+}
+.top:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+.left {
+    float: left;
+    width: 33%;
+}
+.right {
+    float: right;
+    width: 33%;
+}
+h1 {
+border-bottom: 1px solid white;
+}
