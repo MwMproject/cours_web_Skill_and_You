@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice des formulaires</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" method="get" autocomplete="off">
+        <fieldset>
+            <!-- 1. Les coordonées -->  
+            <legend>Vos coordonées</legend>
+            <!-- Civilité -->  
+            <div class="container">
+                <div class="left-part">
+                    <label for="civilite">Civilité <span class="">*</span></label>
+                </div>
+                <div class="right-part">
+                    <select name="civilite" id="civilite">
+                        <option value="" disabled selected>-Choisissez une option--</option>
+                        <option value="madame">Madame</option>
+                        <option value="monsieur">Monsieur</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Nom -->  
+            <div class="container">
+                <div class="left-part">
+                    <label for="nom">Nom <span class="">*</span></label>
+                </div>
+                <div class="right-part">
+                    <input type="text" name="nom" id="nom" title="Max 25car. (A-Z -)" maxlength="25" pattern="[a-zA-Z\-{1,25}" required placeholder="Votre nom"/>
+                </div>
+            </div>
+            <!-- Prénom -->  
+            <div class="container">
+                <div class="left-part">
+                    <label for="prenom">Prénom</span></label>
+                </div>
+                <div class="right-part">
+                    <input type="text" name="nom" id="nom" title="Max 25car. (A-Z -)" maxlength="25" pattern="[a-zA-Z\-{1,25}" required placeholder="Votre prénom"/>
+                </div>
+            </div>
+            <!-- Adresse -->  
+            <div class="container">
+                <div class="left-part">
+                    <label for="adresse">Adresse <span class="">*</span></label>
+                </div>
+                <div class="right-part">
+                    <textarea name="adresse" id="adresse" required placeholder="Votre adresse" rows="5"></textarea>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="container">
+                <div class="left-part">
+                    <label for="email">Email <span class="">*</span></label>
+                </div>
+                <div class="right-part">
+                    <input type="email" name="email" id="email" required placeholder="Votre email"/>
+                </div>
+            </div>
+        </fieldset>
+        <!-- 2. La demande -->  
+        <fieldset>
+             <legend>Votre demande</legend>
+             <!-- Types -->  
+             <div class="container">
+                <div class="left-part">
+                    <label for="type">Type <span class="">*</span></label>
+                </div>
+                <div class="right-part">
+                    <input type="radio" name="type" id="particulier" value="particulier" checked/>
+                    <label for="particulier">&nbsp;Particulier</label>
+
+                    <input type="radio" name="type" id="artisant" value="artisant" checked/>
+                    <label for="artisant">&nbsp;Artisant</label>
+
+                    <input type="radio" name="type" id="entreprise" value="entreprise" checked/>
+                    <label for="entreprise">&nbsp;Entreprise</label>
+                </div>
+            </div>
+            <!-- Demande -->
+            <div class="container">
+                <div class="left-part">
+                    <label for="demande">Demande <span class="">*</span></label>
+                </div>
+                <div class="right-part">
+                    <textarea name="adresse" id="adresse" required placeholder="Votre demande" rows="5"></textarea>
+                </div>
+            </div>
+            <!-- Documentation -->
+            <div class="container">
+                <div class="left-part">
+                    <label for="documentation">Documentation</label>
+                </div>
+                <div class="right-part">
+                    <input type="checkbox" name="documentation" id="technique" value="technique"/>
+                    <label for="technique">&nbsp;Technique</label>
+
+                    <input type="checkbox" name="commercial" id="commercial" value="commercial"/>
+                    <label for="commercial">&nbsp;Commercial</label>
+
+                    <input type="checkbox" name="tarif" id="tarif" value="tarif"/>
+                    <label for="tarif">&nbsp;Tarif</label>
+                </div>
+            </div>
+            <!-- Fichier -->
+            <div class="container">
+                <div class="left-part">
+                    <label for="fichier">Fichier(s) à joindre</label>
+                </div>
+                <div class="right-part">
+                    <input type="file" name="fichier" id="fichier" multiple/>
+                </div>
+            </div>
+        </fieldset>
+        
+        <button type="submit" name="btn" id="btn-submit">Contacter nous</button>
+
+    </form>
+    
+</body>
+</html>
