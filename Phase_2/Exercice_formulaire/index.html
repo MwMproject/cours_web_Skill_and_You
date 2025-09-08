@@ -14,7 +14,7 @@
             <!-- Civilité -->  
             <div class="container">
                 <div class="left-part">
-                    <label for="civilite">Civilité <span class="">*</span></label>
+                    <label for="civilite">Civilité <span class="obligatoire">*</span></label>
                 </div>
                 <div class="right-part">
                     <select name="civilite" id="civilite">
@@ -28,7 +28,7 @@
             <!-- Nom -->  
             <div class="container">
                 <div class="left-part">
-                    <label for="nom">Nom <span class="">*</span></label>
+                    <label for="nom">Nom <span class="obligatoire">*</span></label>
                 </div>
                 <div class="right-part">
                     <input type="text" name="nom" id="nom" title="Max 25car. (A-Z -)" maxlength="25" pattern="[a-zA-Z\-{1,25}" required placeholder="Votre nom"/>
@@ -37,7 +37,7 @@
             <!-- Prénom -->  
             <div class="container">
                 <div class="left-part">
-                    <label for="prenom">Prénom</span></label>
+                    <label for="prenom">Prénom</label>
                 </div>
                 <div class="right-part">
                     <input type="text" name="nom" id="nom" title="Max 25car. (A-Z -)" maxlength="25" pattern="[a-zA-Z\-{1,25}" required placeholder="Votre prénom"/>
@@ -46,7 +46,7 @@
             <!-- Adresse -->  
             <div class="container">
                 <div class="left-part">
-                    <label for="adresse">Adresse <span class="">*</span></label>
+                    <label for="adresse">Adresse <span class="obligatoire">*</span></label>
                 </div>
                 <div class="right-part">
                     <textarea name="adresse" id="adresse" required placeholder="Votre adresse" rows="5"></textarea>
@@ -55,7 +55,7 @@
             <!-- Email -->
             <div class="container">
                 <div class="left-part">
-                    <label for="email">Email <span class="">*</span></label>
+                    <label for="email">Email <span class="obligatoire">*</span></label>
                 </div>
                 <div class="right-part">
                     <input type="email" name="email" id="email" required placeholder="Votre email"/>
@@ -68,7 +68,7 @@
              <!-- Types -->  
              <div class="container">
                 <div class="left-part">
-                    <label for="type">Type <span class="">*</span></label>
+                    <label for="type">Type <span class="obligatoire">*</span></label>
                 </div>
                 <div class="right-part">
                     <input type="radio" name="type" id="particulier" value="particulier" checked/>
@@ -84,7 +84,7 @@
             <!-- Demande -->
             <div class="container">
                 <div class="left-part">
-                    <label for="demande">Demande <span class="">*</span></label>
+                    <label for="demande">Demande <span class="obligatoire">*</span></label>
                 </div>
                 <div class="right-part">
                     <textarea name="adresse" id="adresse" required placeholder="Votre demande" rows="5"></textarea>
@@ -112,12 +112,13 @@
                     <label for="fichier">Fichier(s) à joindre</label>
                 </div>
                 <div class="right-part">
-                    <input type="file" name="fichier" id="fichier" multiple/>
+                    <label for="fichiers" class="btn">Télécharger</label>
+                    <input type="file" name="fichier" id="fichiers" multiple style="display: none;"/>
                 </div>
             </div>
         </fieldset>
         
-        <button type="submit" name="btn" id="btn-submit">Contacter nous</button>
+        <button class="btn" type="submit" name="btn" id="btn-submit">Contacter nous</button>
 
     </form>
     
