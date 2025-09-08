@@ -1,0 +1,20 @@
+.bt {
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  a {
+    background-color: $primary-color;
+    color: $white;
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    @include transition;
+
+    &:hover {
+      background-color: $hover-color;
+      color: $gray;
+    }
+  }
+}

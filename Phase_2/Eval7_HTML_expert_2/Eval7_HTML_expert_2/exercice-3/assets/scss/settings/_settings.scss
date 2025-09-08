@@ -1,0 +1,23 @@
+$primary-color: #3B2851;
+$hover-color: #6d4a95;
+$accent-color: #543973;
+$light-gray: #ededed;
+$white: #ffffff;
+$gray: #cccccc;
+$black: #333;
+
+$font-base: 'BenchNine', sans-serif;
+$font-title: 'BenchNine', sans-serif;
+
+$spacing-unit: 1rem;
+
+// 🔁 Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($duration: 0.3s) {
+  transition: all $duration ease-in-out;
+}

@@ -1,0 +1,55 @@
+.wrapper {
+  width: 95%;
+  max-width: 1550px;
+  margin: 0 auto;
+  background: $white;
+}
+
+main {
+  background: $white;
+  padding-top: 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.article {
+  flex: 0 0 45%;
+  background: $white;
+
+  .article-header {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+      font-size: 2.4rem;
+      margin: 1.5rem 0;
+      color: $black;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      color: $black;
+
+      .auteur {
+        font-weight: bold;
+      }
+    }
+
+    .article-figure img {
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  .article-body {
+    p {
+      margin-bottom: 0.75rem;
+      line-height: 1.5rem;
+    }
+  }
+}

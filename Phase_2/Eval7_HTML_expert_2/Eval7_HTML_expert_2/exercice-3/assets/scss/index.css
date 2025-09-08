@@ -1,0 +1,154 @@
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  align-items: center;
+}
+.header .logo img {
+  width: 200px;
+  height: auto;
+}
+.header .header-title {
+  font-family: "BenchNine", sans-serif;
+  font-size: 1.2rem;
+  padding-right: 16px;
+  margin: 0;
+}
+
+nav {
+  padding: 1rem;
+}
+nav .menu {
+  background: #543973;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+nav .menu .menu-item {
+  list-style: none;
+}
+nav .menu .menu-item a {
+  background: #3B2851;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+  font-weight: bold;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+nav .menu .menu-item a:hover {
+  background-color: #6d4a95;
+  color: #d4c7e4;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1550px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+main {
+  background: #ffffff;
+  padding-top: 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.article {
+  flex: 0 0 45%;
+  background: #ffffff;
+}
+.article .article-header {
+  margin-bottom: 1rem;
+}
+.article .article-header h2 {
+  font-size: 2.4rem;
+  margin: 1.5rem 0;
+  color: #333;
+}
+.article .article-header .meta {
+  font-size: 0.875rem;
+  color: #333;
+}
+.article .article-header .meta .auteur {
+  font-weight: bold;
+}
+.article .article-header .article-figure img {
+  width: 100%;
+  border-radius: 4px;
+}
+.article .article-body p {
+  margin-bottom: 0.75rem;
+  line-height: 1.5rem;
+}
+
+.main-footer {
+  background-color: #ededed;
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.bt {
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.bt a {
+  background-color: #3B2851;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+.bt a:hover {
+  background-color: #6d4a95;
+  color: #cccccc;
+}
+
+.containerVignettes {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 1.5rem;
+  box-shadow: -1px -1px 20px 10px #ededed;
+}
+
+.vignette {
+  position: relative;
+  flex: 0 0 30%;
+  overflow: hidden;
+}
+.vignette .vignette-img {
+  width: 100%;
+  display: block;
+}
+.vignette .vignette-figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: none;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+.vignette:hover .vignette-figcaption {
+  display: block;
+}/*# sourceMappingURL=index.css.map */
