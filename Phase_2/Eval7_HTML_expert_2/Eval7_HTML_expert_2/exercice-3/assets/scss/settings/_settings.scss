@@ -1,23 +1,15 @@
-$primary-color: #3B2851;
-$hover-color: #6d4a95;
-$accent-color: #543973;
-$light-gray: #ededed;
-$white: #ffffff;
-$gray: #cccccc;
-$black: #333;
+$font-family-base: 'BenchNine', sans-serif;
+$font-size-root: 1.25em; // html
+$font-size-body: 1rem;
+$line-height-body: 1.5rem;
 
-$font-base: 'BenchNine', sans-serif;
-$font-title: 'BenchNine', sans-serif;
+$color-page-bg: #ededed;
+$color-surface: #fff;
+$color-link: #ae2123;
+$color-link-hover: #999;
 
-$spacing-unit: 1rem;
-
-// 🔁 Mixins
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin transition($duration: 0.3s) {
-  transition: all $duration ease-in-out;
-}
+$purple-btn: #3B2851; // boutons + items 800
+$purple-nav: #543973; // menu bg 700
+$purple-hover-btn: #6d4a95; // hover 500
+$purple-hover-txt: #d4c7e4; // hover texte 200
+$grey-hover-txt: #cccccc;

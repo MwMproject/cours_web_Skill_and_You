@@ -1,32 +1,24 @@
-nav {
-  padding: $spacing-unit;
+.menu {
+  background: $purple-nav;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+}
 
-  .menu {
-    background: $accent-color;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
+.menu-item { list-style: none; }
 
-    .menu-item {
-      list-style: none;
+.menu-item a {
+  background: $purple-btn;
+  padding: 10px 20px;
+  margin: 1px 0;
+  display: block;
+  text-decoration: none;
+  color: #fff;
 
-      a {
-        background: $primary-color;
-        color: $white;
-        padding: 0.5rem 1rem;
-        margin: 0 0.25rem;
-        border-radius: 5px;
-        font-weight: bold;
-        display: block;
-        @include transition;
-
-        &:hover {
-          background-color: $hover-color;
-          color: #d4c7e4;
-        }
-      }
-    }
+  &:hover {
+    background: $purple-hover-btn;
+    color: $purple-hover-txt;
   }
 }

@@ -1,19 +1,11 @@
 .header {
-  height: 100px;
   display: flex;
   justify-content: space-between;
-  padding-top: 1.5rem;
   align-items: center;
+  padding-top: 1.5rem;
+}
 
-  .logo img {
-    width: 200px;
-    height: auto;
-  }
-
-  .header-title {
-    font-family: $font-title;
-    font-size: 1.2rem;
-    padding-right: 16px;
-    margin: 0;
-  }
+.header-title {
+  padding-right: 1rem;
+  margin: 0;
 }

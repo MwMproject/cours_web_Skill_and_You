@@ -1,0 +1,60 @@
+html { font-size: $font-size-root; }
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-body;
+  line-height: $line-height-body; 
+  background: $color-page-bg;
+}
+
+a {
+  text-decoration: none;
+  color: $color-link;
+
+  &:hover { 
+    color: $color-link-hover; 
+  }
+}
+
+img { 
+  max-width: 100%; 
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1550px;
+  margin: 0 auto;
+  background: $color-surface;
+}
+
+h1, .h1 {
+  font-size: 3rem;
+  line-height: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5em;
+}
+
+h2, .h2 {
+  font-size: 2.4rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3, .h3 {
+  font-size: 1.35rem;
+  line-height: 1.3rem;
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+p, ul, ol {
+  line-height: 1.5rem;
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+ul ul, ol ol, ul ol, ol ul, .no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
