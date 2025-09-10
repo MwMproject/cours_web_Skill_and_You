@@ -1,216 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<meta charset="utf-8" />
-	<title>Club 108 - La passion des films</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<link href="reset.css" rel="stylesheet" media="screen">
-	<link href="style.css" rel="stylesheet" media="screen">
-	<link href="https://fonts.googleapis.com/css2?family=BenchNine&family=Chela+One&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page du Club 108, passion des films" />
+  <title>Club 108 - La passion des films</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chela+One&family=BenchNine&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles/style.css" />
 </head>
 <body>
-	<div class="wrapper">
-		<header class="main-header flex-container space-between  xs-column-xl-row " role="banner">
-			<div class="logo">
-				<img src="assets/img/logo.png" alt="logo club 108">
-			</div>
-			<div class="slogan"><h1 class="no-margin">La passion des films</h1></div>
-			<nav class="main-nav-wrapper"> 
-				<ul class="main-nav flex-container xs-column-xl-row">
-					<li>
-						<a href="#">Programme</a>
-					</li>
-					<li>
-						<a href="#">Actualités</a>
-					</li>
-					<li>
-						<a href="#">Jeune public</a>
-					</li>
-					<li>
-						<a href="#">Tarifs</a>
-					</li>
-					<li>
-						<a href="#">Accès</a>
-					</li>
-					<li class="search">
-						<input type="search" placeholder="rechercher" role="search">
-					</li>
-				</ul>
-			</nav>
-		</header>
+  <header role="banner" class="site-header">
+    <div class="logo-container">
+      <img src="assets/img/logo.png" alt="Logo du Club 108" class="logo" />
+    </div>
+    <h1>La passion des films</h1>
+    <nav role="navigation" class="main-nav">
+      <ul>
+        <li><a href="#">Programme</a></li>
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Jeune public</a></li>
+        <li><a href="#">Tarifs</a></li>
+        <li><a href="#">Accès</a></li>
+      </ul>
+      <form role="search" class="search-form" action="#" method="get">
+        <input type="search" name="q" placeholder="rechercher" aria-label="Recherche sur le site" />
+      </form>
+    </nav>
+  </header>
 
-	<main role="main" class="grid-container">
-		<article class="wrap-section wrap-article-1 flex-container grid-xs-col-8 grid-xl-col-5 grid-xl-row-3 column">
-			<header class="box-header">
-				<h2>La une</h2>
-			</header>
-			<figure class="box-figure">
+  <main class="main-content">
 
-				<picture>
-					<source srcset="assets/img/01-small.jpg" media="(max-width:640px)">
-					<source srcset="assets/img/01-medium.jpg" media="(max-width:1200px)">
-					<source srcset="assets/img/01-big.jpg" media="(min-width:1201px)">
-					<img src="assets/img/01.jpg" alt="description">
-					</picture>
+    <!-- CONTENU PRINCIPAL + COLONNE DROITE -->
+    <section class="layout-two-columns">
+      
+      <!-- À LA UNE -->
+      <div class="main-news">
+        <div class="tag">La une</div>
+        <img src="assets/img/img01.jpg" alt="Image principale" />
+        <h2>Ad officia officia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex repellendus odit vel cumque, dolorum accusamus totam voluptatibus ad quidem excepturi consectetur suscipit eveniet repudiandae commodi eos fuga assumenda exercitationem modi. Molestiae suscipit natus cupiditate vel qui, molestias non labore voluptates odio ipsa, corporis minima illo fugiat rerum veritatis ducimus magnam perferendis? Qui in officia necessitatibus sit quidem nemo! Reprehenderit, vitae!</p>
+        <div class="buttons">
+          <a href="#" class="btn">Réserver</a>
+          <a href="#" class="btn">Commander l’affiche</a>
+        </div>
+      </div>
 
-			</figure>
-			<section class="box-film">
-				<div class="wrap-resume">
-					<div class="padding">
-						<h3>Ad officia officia</h3>
-						<p>
-							Excepteur reprehenderit incididunt enim minim laboris dolore deserunt ut in culpa ut culpa deserunt. Irure officia non laboris et ex fugiat fugiat sed enim paPariatur dolore excepteur id eiusmod ut velit ut et tempor sit fugiat eiusmod enim mollit in in occaecat laborum esse sunt culpa consequat occaecat exercitation in culpa exercitation.riatur nulla cillum proident laboris amet ut. Occaecat dolor officia fugiat ullamco sunt sit velit nisi id consequat irure fugiat velit velit exercitation ad labore in consectetur et dolor eiusmod culpa. Eiusmod minim nulla eu cillum exercitation eu sint ut ullamco sit duis nisi sunt in excepteur exercitation aliquip proident adipisicing in quis exercitation laboris in in ut adipisicing ullamco id officia ad enim ea sint in adipisicing irure. Ut consectetur non sunt irure occaecat eu reprehenderisst cupidatat adipisicing ut culpa consequat. Ad officia officia occaecat in ut id proident dolor cupidatat cupidatat in quis laborum exercitation nostrud consequat ullamco ut. Occaecat quis labore occaecat est ad eiusmod velit officia commodo sit est dolore.  
-							<a href="#" title="lire la suite" class="link">Lire la suite</a>
-						</p>
-					</div>
-					<div class="wrap-btn">
-						<a href="#" class="btn bckg-green">Reserver</a>
-						<a href="#" class="btn bckg-greeb">Commander l'affiche</a>
-					</div>
-				</div>
-			</section>
-		</article>
+      <!-- COLONNE DROITE -->
+      <aside class="sidebar">
 
-		<section class="wrap-section  flex-container grid-xs-col-8 grid-xl-col-3  column">
-			<header class="box-header">
-				<h2>Horraires </h2>
-			</header>
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Heure</th>
-						<th class="big">Film</th>
-						<th>Salle</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>12h</td>
-						<td class="big">Tommy</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td>14h</td>
-						<td class="big">In the Wood</td>
-						<td>1 </td>
-					</tr>
-					<tr>
-						<td>14h</td>
-						<td class="big">Le chien perdu</td>
-						<td>2</td>
-					</tr>
-					<tr>
-						<td>18h</td>
-						<td class="big">Lavoir et les siens</td>
-						<td>1</td>
-					</tr>
-					<tr>
-						<td>18h</td>
-						<td class="big">Truqueur sur gage</td>
-						<td>2</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
-		<section class="wrap-section  flex-container grid-xs-col-8 grid-xl-col-3  column">
-				<header class="box-header">
-						<h2>Adresse</h2>
-				</header>
-				<div class="card" itemscope itemtype="https://schema.org/MovieTheater"> 
-					<h3 itemprop="name" class="no-margin">Le Club 118</h3>
-					<address itemscope itemtype="http://schema.org/PostalAddress" itemprop="address">
-						<span itemprop="streetAdress">118, rue du Club -</span>
-						<span itemprop="postalCode">18100 <span itemprop="addressLocality">Ouhytes</span>
-					</address>
-				</div>
-		</section>
-		<section class="wrap-section  flex-container grid-xs-col-8 grid-xl-col-3  column">
-			<header class="box-header">
-				<h2>Portfolio</h2>
-			</header>
-			 <!-- <img src="img/06-600.jpg" alt="description"> -->
-			<figure class="portfolio">
-				<picture>
-					<source srcset="assets/img/06-small.jpg" media="(max-width:340px)">
-					<source srcset="assets/img/06-big.jpg" media="(max-width:939px)">
-					<source srcset="assets/img/06-medium.jpg" media="(min-width:940px)">
-					<img src="assets/img/06.jpg" alt="description">
-				</picture>
-				<figcaption class="portfolio-pan">
-					<a href="#" class="portfolio-link">Regarder</a>
-				</figcaption>
-			</figure>
-		</section>
+        <div class="box horaires">
+          <h3>Horaires</h3>
+          <table>
+            <thead>
+              <tr><th>Heure</th><th>Film</th><th>Salle</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>12h</td><td>Tommy</td><td>1</td></tr>
+              <tr><td>14h</td><td>In the Wood</td><td>1</td></tr>
+              <tr><td>14h</td><td>Le chien perdu</td><td>2</td></tr>
+              <tr><td>18h</td><td>Lavoir et les siens</td><td>1</td></tr>
+              <tr><td>18h</td><td>Truqueur sur gage</td><td>2</td></tr>
+            </tbody>
+          </table>
+        </div>
 
+        <div class="box adresse">
+          <h3>Adresse</h3>
+          <p><strong>Le Club 118</strong><br>118, rue du Club - 18100 Ouhytes</p>
+        </div>
 
-		<section class="wrap-section  flex-container shdw grid-xs-col-8 xs-column-xl-row">
-			<header class="box-header">
-				<h2>Cette semaine</h2>
-			</header>
-			<div class="flex-container xs-column-xl-row nowrap">
-				<article class="flex-container column xs-col-12 xl-col-6 xl-gutter-right">
-					<h3>Lorem ipsum duis eiusmod.</h3>
-					<figure class="affiche">
-						<picture>
-							<source srcset="assets/img/02-small.jpg" media="(max-width:430px)">
-							<source srcset="assets/img/02-medium.jpg" media="(max-width:640px)">
-							<source srcset="assets/img/02-big.jpg" media="(max-width:940px)">
-							<source srcset="assets/img/02-medium.jpg" media="(max-width:1349px)">
-							<source srcset="assets/img/02-big.jpg" media="(min-width:1350px)">
-							<img src="assets/img/02.jpg" alt="description">
-						</picture>
-					</figure>
-					<p>
-						Amet in qui elit enim ut ut in nulla reprehenderit ut in ad ad ut esse deserunt aute sint dolor dolor do do minim eu eu sit non aliquip magna sed voluptate magna eiusmod dolor deserunt sunt consectetur qui enim. <a href="#" title="lire la suite" class="link">Lire la suite</a>
-					<p>
-				</article>
-				<article class="flex-container xs-col-12 column xl-col-6 xl-gutter-left">
-					<h3>Nisi tempor in </h3>
-					<figure class="affiche">
-						<picture>
-							<source srcset="assets/img/03-small.jpg" media="(max-width:430px)">
-							<source srcset="assets/img/03-medium.jpg" media="(max-width:640px)">
-							<source srcset="assets/img/03-big.jpg" media="(max-width:940px)">
-							<source srcset="assets/img/03-medium.jpg" media="(max-width:1349px)">
-							<source srcset="assets/img/03-big.jpg" media="(min-width:1350px)">
-							<img src="assets/img/03.jpg" alt="description">
-						</picture>
-					</figure>
-					<p>
-						Amet in qui elit enim ut ut in nulla reprehenderit ut in ad ad ut esse deserunt aute sint dolor dolor do do minim eu eu sit non aliquip magna sed voluptate magna eiusmod dolor deserunt sunt consectetur qui enim. <a href="#" title="lire la suite" class="link">Lire la suite</a>
-					</p>
-				</article>
-			</div>  
-		</section>
+        <div class="box portfolio">
+          <h3>Portfolio</h3>
+          <img src="assets/img/img02.jpg" alt="Bobinne de film" />
+        </div>
+      </aside>
+    </section>
 
-		
-	</main>
+    <!-- CETTE SEMAINE -->
+    <section class="this-week">
+      <h2 class="tag red">Cette semaine</h2>
+      <div class="week-articles">
+        <article>
+          <img src="assets/img/img03.jpg" alt="Boîte VHS" />
+          <h3>Lorem ipsum duis eiusmod.</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat non natus vel corrupti eum laudantium iste sit rerum quam! Molestias?</p>
+          <a href="#" class="more">Lire la suite</a>
+        </article>
+        <article>
+          <img src="assets/img/img04.jpg" alt="Salle de cinéma" />
+          <h3>Nisi tempor in</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eius vitae hic id numquam perspiciatis debitis consequatur illum adipisci ipsa.
+		  </p>
+          <a href="#" class="more">Lire la suite</a>
+        </article>
+      </div>
+    </section>
 
-	<footer role="contentinfo" class="flex-container space-around pd-m">
-		<ul class="footer-list flex-container wrap xl-col-9 has-gutter">
-			<li>CLUB 108</li>
-			<li>Parking et accès</li>
-			<li>Tarifs et horaire</li>
-			<li>Carte club</li>
-			<li>A proximité </li>
-			<li>Jobs étudiants</li>
-			<li>Scéances privées</li>
-			<li> Espace partenaire</li>
-			<li>Parking et accès</li>
-			<li>Tarifs et horaire</li>
-			<li>Carte club</li>
-			<li>A proximité </li>
-			<li>Jobs étudiants</li>
-			<li>Scéances privées</li>
-			<li> Espace partenaire</li>
-		</ul>
+  </main>
 
-		<figure class="logo-mini xl-col-3 has-gutter center">
-			<picture>
-				<img src="assets/img/logo.png" alt="">
-			</picture>
-		</figure>
-	</footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>CLUB 108</h4>
+      <ul>
+        <li>Carte club</li>
+        <li>Tarifs et horaire</li>
+        <li>Jobs étudiants</li>
+        <li>Espaces privés</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Parking et accès</h4>
+      <ul>
+        <li>À proximité</li>
+        <li>Carte club</li>
+        <li>Séances privées</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Tarifs et horaire</h4>
+      <ul>
+        <li>Jobs étudiants</li>
+        <li>Parking et accès</li>
+        <li>À proximité</li>
+        <li>Espace partenaire</li>
+      </ul>
+    </div>
+    <div class="footer-logo">
+      <img src="assets/img/logo.png" alt="Logo Club 108" />
+    </div>
+  </footer>
+
 </body>
 </html>
