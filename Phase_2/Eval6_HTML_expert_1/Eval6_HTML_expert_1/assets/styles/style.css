@@ -21,12 +21,11 @@ img {
 
 a {
   text-decoration: none;
-  color: inherit;
   color: #ae2123;
   font-weight: bold;
 }
 
-h1, h3, h4 {
+h1 {
   font-family: 'Chela One', cursive;
 }
 
@@ -44,7 +43,7 @@ h1, h3, h4 {
   margin-bottom: 30px;
 }
 .logo {
-  max-height: 60px;
+  max-height: 80px;
 }
 .site-header h1 {
   color: #527bea;
@@ -152,11 +151,8 @@ h1, h3, h4 {
 .sidebar {
   display: flex;
   flex-direction: column;
-  background: #f9f9f9;
-  align-self: stretch;
 }
 .sidebar .box {
-  background: none;
   border: 1px solid #ddd;
   box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
   padding: 1rem;
@@ -195,7 +191,7 @@ h1, h3, h4 {
   color: white; 
 }
 .portfolio {
-  display: inline-block;
+  width: 100%;
 }
 .img-wrapper {
   position: relative;
@@ -205,6 +201,17 @@ h1, h3, h4 {
   display: block;
   width: 100%;
   height: auto;
+}
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #ffffffa2;
+  border: 2px solid rgba(255,255,255,0.5);
+  pointer-events: none;
 }
 .btn-img {
   position: absolute;
@@ -220,15 +227,46 @@ h1, h3, h4 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: background 0.3s;
 }
-.img-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
-  background-color: #ffffffa2;
-}
 .btn-img:hover {
   background: #41414198;
+}
+
+/* this-week part */
+.this-week .week-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.week-articles article h3 {
+  color: #333;
+  margin-top: 1rem;
+}
+.week-articles article p {
+  margin: 0.5rem 0;
+}
+.week-articles .more:hover {
+  color: #999;
+}
+
+/* footer */
+.site-footer {
+  background: #ededed;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-col {
+  flex: 1 1 200px;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.footer-logo img {
+  max-height: 100px;
+  margin-top: auto;
 }
