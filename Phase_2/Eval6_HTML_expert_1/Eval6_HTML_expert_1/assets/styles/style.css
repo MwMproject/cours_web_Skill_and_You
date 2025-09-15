@@ -304,7 +304,7 @@ h1 {
   }
 /* main part */
   .main-content {
-    margin: 0.5rem auto;
+    margin: 1rem;
   }
   .main-news .buttons {
     flex-direction: column;
@@ -314,6 +314,10 @@ h1 {
   .more, .week-articles .more {
     display: inline;
     margin-top: 0.5rem;
+  }
+  .sidebar {
+    margin-right: 0;
+    gap: 1rem;
   }
   
 /* footer */
