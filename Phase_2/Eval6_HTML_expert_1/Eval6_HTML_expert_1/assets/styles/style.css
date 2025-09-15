@@ -3,28 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
     max-width: 1850px;
     font-family: 'BenchNine', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.5em;
     line-height: 1.5;
     background: #fff;
     color: #333;
 }
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
 a {
   text-decoration: none;
   color: #ae2123;
   font-weight: bold;
 }
-
 h1 {
   font-family: 'Chela One', cursive;
 }
@@ -33,7 +29,6 @@ h1 {
 .site-header {
   padding: 1rem 2rem;
   background: #fff;
-  border-bottom: 2px solid #ededed;
 }
 .top-header {
   display: flex;
@@ -87,8 +82,7 @@ h1 {
 /* main part */
 .main-content {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -97,9 +91,8 @@ h1 {
 /* left-part */
 .layout-two-columns {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 3fr 2fr;
   gap: 1rem;
-  align-items: stretch;
 }
 .tag
  {
@@ -151,14 +144,14 @@ h1 {
 .sidebar {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 15px;
 }
 .sidebar .box {
   border: 1px solid #ddd;
   box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
   padding: 1rem;
-  margin-bottom: 15px;
-}
-.sidebar .box:last-child {
   margin-bottom: 0;
 }
 .sidebar h3 {
@@ -189,9 +182,6 @@ h1 {
 .horaires table tbody tr:nth-child(even) {
   background-color: #858585;
   color: white; 
-}
-.portfolio {
-  width: 100%;
 }
 .img-wrapper {
   position: relative;
@@ -262,7 +252,6 @@ h1 {
 }
 .footer-col ul {
   list-style: none;
-  padding: 0;
   font-size: 1rem;
   line-height: 1.4;
 }
@@ -273,11 +262,13 @@ h1 {
 }
 .footer-logo img {
   max-height: 100px;
-  margin-top: auto;
 }
 
 /* responsive */
 @media (max-width: 940px) {
+  body {
+    font-size: 1.25em;
+  }
   /* header + nav */
   .top-header {
     display: flex;
