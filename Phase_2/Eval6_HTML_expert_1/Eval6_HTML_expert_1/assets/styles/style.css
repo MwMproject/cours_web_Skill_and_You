@@ -329,7 +329,7 @@ h1 {
   }
   .footer-logo {
     position: absolute;
-    right: 0;
+    right: 1rem;
     width: 90px;
     margin-right: 1rem;
   }
