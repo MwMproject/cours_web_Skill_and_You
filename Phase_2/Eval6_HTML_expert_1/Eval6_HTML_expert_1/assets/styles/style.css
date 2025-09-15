@@ -213,6 +213,18 @@ h1 {
 }
 
 /* this-week part */
+.this-week {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+}
+.this-week h2 {
+  width: 200px;
+  background: #ae2123;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 .week-articles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -236,6 +248,7 @@ h1 {
 .site-footer {
   background: #ededed;
   padding: 2rem;
+  margin: 0 1rem;
   display: flex;
 }
 .footer-col {
@@ -298,7 +311,7 @@ h1 {
     align-items: center;
     gap: 1rem;
   }
-  .more {
+  .more, .week-articles .more {
     display: inline;
     margin-top: 0.5rem;
   }
