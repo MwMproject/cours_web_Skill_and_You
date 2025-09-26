@@ -10,7 +10,7 @@ const planningJours = [
 // Création du tableau dynamique
 function genererTableau() {
   const table = document.getElementById("planning");
-  table.innerHTML = ""; // Nettoyage
+  table.innerHTML = ""; // Nettoyage du tableau
 
   for (let i = 0; i < planningJours.length; i++) {
     const ligne = document.createElement("tr");
