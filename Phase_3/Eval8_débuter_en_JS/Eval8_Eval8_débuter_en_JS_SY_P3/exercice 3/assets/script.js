@@ -19,7 +19,7 @@ function genererTableau() {
     celluleJour.textContent = planningJours[i].jour;
 
     const celluleStatut = document.createElement("td");
-    celluleStatut.textContent = planningJours[i].statut;
+    celluleStatut.textContent = planningJours[i].statut ? "Réservé" : "Libre";
     celluleStatut.className = planningJours[i].statut ? "red" : "green";
 
     // Ajout de l’interaction
@@ -45,6 +45,7 @@ document.getElementById("btnCalcul").addEventListener("click", () => {
 document.getElementById("btnReset").addEventListener("click", () => {
   planningJours.forEach((j) => (j.statut = false));
   genererTableau();
+  alert("Planning réinitialisé !");
 });
 
 // Bouton Réservation Aléatoire
