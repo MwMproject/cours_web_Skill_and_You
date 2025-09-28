@@ -34,3 +34,14 @@ td:last-child {
 .red {
   background-color: rgb(235, 12, 12);
 }
+/* Button styles */
+.buttons {
+  margin-top: 20px;
+}
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  color: white;
+  background-color: #444343;
+  border-radius: 8px;
+}
