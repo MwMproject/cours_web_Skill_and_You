@@ -45,28 +45,7 @@ document.getElementById("btnCalcul").addEventListener("click", () => {
 document.getElementById("btnReset").addEventListener("click", () => {
   planningJours.forEach((j) => (j.statut = false));
   genererTableau();
-});
-
-// Bouton Réservation Aléatoire
-document.getElementById("btnRandom").addEventListener("click", () => {
-  let n = parseInt(prompt("Combien de jours voulez-vous réserver ?"));
-  if (isNaN(n) || n < 0 || n > 5) {
-    alert("Entrée invalide");
-    return;
-  }
-
-  planningJours.forEach((j) => (j.statut = false)); // reset
-
-  let indices = [];
-  while (indices.length < n) {
-    let rand = Math.floor(Math.random() * 5);
-    if (!indices.includes(rand)) {
-      indices.push(rand);
-      planningJours[rand].statut = true;
-    }
-  }
-
-  genererTableau();
+  alert("Planning réinitialisé !");
 });
 
 // Générer tableau au chargement
