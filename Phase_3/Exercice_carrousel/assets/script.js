@@ -5,12 +5,33 @@ class Carousel {
     this.btnNext = this.carousel.querySelector(".button-next");
     this.slideContainer = this.carousel.querySelector(".slide-container");
 
-    this.currentIndex = 0;
+    this.currentSlide = 0;
     this.slideCount = this.slideContainer.children.length - 1;
-    this.buttonPrev.addEventListener("click", this.previousSlide.bind(this));
-    this.buttonNext.addEventListener("click", this.nextSlide.bind(this));
+    this.btnPrev.addEventListener("click", this.previousSlide.bind(this));
+    this.btnNext.addEventListener("click", this.nextSlide.bind(this));
   }
 
-  previousSlide() {}
-  nextSlide() {}
+  previousSlide() {
+    this.currentSlide -= 1;
+    if (this.currentSlide < 0) {
+      this.currentSlide = this.slideCount;
+    }
+    this.moveCarousel();
+  }
+  nextSlide() {
+    this.currentSlide += 1;
+    if (this.currentSlide > this.slideCount) {
+      this.currentSlide = 0;
+    }
+    this.moveCarousel();
+  }
+
+  moveCarousel() {
+    var position = 100 * this.currentSlide;
+    this.slideContainer.style.transform = "translateX(-" + position + "%)";
+  }
 }
+
+window.onload = function () {
+  new Carousel(document.querySelector(".carousel"));
+};
