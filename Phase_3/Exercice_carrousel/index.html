@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="carousel">
-        <div class="slide-container">
-            <div  class="slide">
+    <div class="carousel" role="grope" aria-roledescription="carousel" aria-label="Carousel d'images de Norvège">
+        <div class="slide-container" aria-live="polite">
+            <div  class="slide" role="group" aria-roledescription="slide" aria-label="Image 1 sur 3" aria-hidden="false">
                 <img src="assets/img/Aurore-boréale-norvège.jpg" alt="image d'un fjord en Norvège en hiver">
             </div>
-            <div  class="slide">
+            <div  class="slide" role="group" aria-roledescription="slide" aria-label="Image 2 sur 3" aria-hidden="true">
                 <img src="assets/img/bateau-norvège.jpg" alt="image d'un fjord en Norvège">
             </div>
-            <div class="slide">
+            <div class="slide" role="group" aria-roledescription="slide" aria-label="Image 3 sur 3" aria-hidden="true">
                 <img src="assets/img/fjord-norvège.jpg" alt="image d'un village en Norvège">
             </div>
         </div>
     <div class="button-container">
-        <button class="button-prev">&larr;</button>
-        <button class="button-next">&rarr;</button>
+        <button class="button-prev" aria-label="Image précédente">&larr;</button>
+        <button class="button-next" aria-label="Image suiante">&rarr;</button>
     </div>
     </div>
 </body>

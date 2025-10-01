@@ -29,6 +29,13 @@ class Carousel {
   moveCarousel() {
     var position = 100 * this.currentSlide;
     this.slideContainer.style.transform = "translateX(-" + position + "%)";
+    for (var i = 0; i <= this.slideCount; i++) {
+      if (i === this.currentSlide) {
+        this.slideContainer.children[i].setAttribute("aria-hidden", false);
+      } else {
+        this.slideContainer.children[i].setAttribute("aria-hidden", true);
+      }
+    }
   }
 }
 
