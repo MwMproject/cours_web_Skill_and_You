@@ -18,6 +18,7 @@ $travels = [
 <head>
     <meta charset="UTF-8">
     <title>Formulaire Covoiturage</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <h1>Formulaire de contact - Covoiturage</h1>
