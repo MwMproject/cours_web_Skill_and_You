@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
   message.className = "message";
   document.body.appendChild(message);
 
-  // Gestion de l'événement "change"
+  // Gestion de l'événement pour "changer" la note
   select.addEventListener("change", (event) => {
     const selectedNote = event.target.value;
     if (selectedNote === "") {
