@@ -2,7 +2,7 @@
 // Activer l'affichage des erreurs pour le débogage
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-// form.php — génère dynamiquement le <form> + <select>
+// form.php — génère le form + select
 $notes = ["do", "ré", "mi", "fa", "sol", "la", "si"];
 // Génération du formulaire HTML
 echo '<form action="assets/convert.php" id="music-form">';
