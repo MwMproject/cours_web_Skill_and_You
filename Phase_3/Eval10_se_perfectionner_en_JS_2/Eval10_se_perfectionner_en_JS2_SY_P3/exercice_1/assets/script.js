@@ -1,32 +1,71 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("#music-form"); // On récupère le formulaire
-  const select = document.querySelector("#note-select"); // la liste déroulante
-  const message = document.querySelector("#result-message"); //Et la zone d'affichage du résultat
+  const app = document.querySelector("#app"); // Sélectionne la zone où le formulaire sera inséré
+  const message = document.querySelector("#result-message"); // Sélectionne l'élément où le message du resultat sera affiché
 
-  // Au changement de la note
-  select.addEventListener("change", (event) => {
-    const note = event.target.value; // Récupère la note choisie
+  // ---------- Création du formulaire dynamiquement ----------
+  const form = document.createElement("form"); // Crée l'élément <form>
+  form.id = "music-form"; // Donne l'identifiant au formulaire
 
+  const select = document.createElement("select"); // Crée la liste déroulante
+  select.id = "note-select";
+  select.name = "note";
+
+  // ---------- Tableau des notes de base et leur correspondance
+  const notes = [
+    { classique: "do", americain: "C" },
+    { classique: "ré", americain: "D" },
+    { classique: "mi", americain: "E" },
+    { classique: "fa", americain: "F" },
+    { classique: "sol", americain: "G" },
+    { classique: "la", americain: "A" },
+    { classique: "si", americain: "B" },
+  ];
+
+  // Option par défaut
+  const defaultOption = document.createElement("option");
+  defaultOption.value = "";
+  defaultOption.textContent = "-- Choisissez une note --";
+  select.appendChild(defaultOption);
+
+  // Génération des options
+  notes.forEach((note) => {
+    const opt = document.createElement("option");
+    opt.value = note.classique;
+    opt.textContent = note.classique;
+    select.appendChild(opt);
+  });
+  //  Ajoute la liste déroulante et le formulaire dans la page
+  form.appendChild(select);
+  app.appendChild(form);
+
+  // Évenement du changement de la note sélectionnée
+  select.addEventListener("change", async (event) => {
+    const note = event.target.value;
     if (note === "") {
-      message.textContent = ""; // Si rien sélectionné → efface le message
+      // Si aucune sélectionnée, on affiche le message
+      message.textContent = "";
       return;
     }
 
-    const url = form.action; // On prend l'URL du fichier PHP (convert.php)
+    try {
+      // Envoi de la requête AJAX vers le serveur/PHP
+      const response = await fetch("assets/convert.php", {
+        method: "POST", // Type de la méthode d'envoi
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded", // type de données envoyées
+        },
+        body: `note=${encodeURIComponent(note)}`, // données envoyées
+      });
+      // Si le serveur ne répond pas correctement, on lance une erreur
+      if (!response.ok) throw new Error("Erreur réseau");
 
-    const xhr = new XMLHttpRequest(); // Pour la création de la requête AJAX
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    // Quand la réponse est prête
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        message.textContent = xhr.responseText; // Affiche la réponse PHP
-      } else {
-        message.textContent = "Une erreur est survenue.";
-      }
-    };
-
-    xhr.send(`note=${encodeURIComponent(note)}`); // Envoi de la donnée au serveur
+      // Lecture de la réponse du serveur
+      const text = await response.text();
+      // Affiche le message envoyé par le php sur la page
+      message.textContent = text;
+    } catch (err) {
+      // En cas d'erreur réseau ou toute autre, on affiche le message d'erreur
+      message.textContent = "Erreur : " + err.message;
+    }
   });
 });
