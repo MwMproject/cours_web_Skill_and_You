@@ -1,0 +1,60 @@
+<h2>Contact</h2>
+
+<p class="hint" *ngIf="schoolName">
+  Établissement :
+  <strong>{{ schoolName }}</strong>
+  <span *ngIf="schoolCity">({{ schoolCity }})</span>
+</p>
+
+<form [formGroup]="form" (ngSubmit)="submit()" class="card">
+
+  <label>
+    Nom
+    <input type="text" formControlName="nom">
+  </label>
+  <div class="error" *ngIf="submitted && form.get('nom')?.invalid">
+    Champ obligatoire
+  </div>
+
+  <label>
+    Prénom
+    <input type="text" formControlName="prenom">
+  </label>
+  <div class="error" *ngIf="submitted && form.get('prenom')?.invalid">
+    Champ obligatoire
+  </div>
+
+  <label>
+    Email
+    <input type="email" formControlName="email">
+  </label>
+  <div class="error" *ngIf="submitted && form.get('email')?.invalid">
+    Email invalide
+  </div>
+
+  <label>
+    Objet
+    <input type="text" formControlName="objet">
+  </label>
+  <div class="error" *ngIf="submitted && form.get('objet')?.invalid">
+    Champ obligatoire
+  </div>
+
+  <label>
+    Message
+    <textarea rows="5" formControlName="message"></textarea>
+  </label>
+  <div class="error" *ngIf="submitted && form.get('message')?.invalid">
+    Champ obligatoire
+  </div>
+
+  <label class="cgu">
+    <input type="checkbox" formControlName="cgu">
+    J’accepte les conditions générales d’utilisation
+  </label>
+  <div class="error" *ngIf="submitted && form.get('cgu')?.invalid">
+    Obligatoire
+  </div>
+
+  <button class="btn" type="submit">Valider</button>
+</form>

@@ -1,0 +1,9 @@
+.hint{ margin-bottom: 10px; }
+label{ display:block; margin: 10px 0; }
+input, textarea{ width:100%; padding:10px; border:1px solid #ddd; border-radius:10px; box-sizing:border-box; }
+.error{ color:#b00020; font-size: 12px; margin-top: -6px; }
+.cgu{ display:flex; gap:10px; align-items:center; }
+.btn{
+  background:#1976d2; color:white; border:none; padding:10px 14px;
+  border-radius:10px; cursor:pointer;
+}

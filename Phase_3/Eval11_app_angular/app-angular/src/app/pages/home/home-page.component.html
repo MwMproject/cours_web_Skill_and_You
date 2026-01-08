@@ -1,0 +1,31 @@
+<h2>Établissements scolaires – {{ city }}</h2>
+
+<p *ngIf="loading">Chargement des établissements…</p>
+
+<div class="grid" *ngIf="!loading">
+  <div class="card">
+    <app-map [schools]="schools" (selectSchool)="onSelectSchool($event)"></app-map>
+  </div>
+
+  <div class="card">
+    <h3>Détails</h3>
+    <p *ngIf="!selected">Clique sur un marqueur pour voir les informations.</p>
+
+    <div *ngIf="selected">
+      <p><strong>Nom :</strong> {{ selected.fields.nom_etablissement || '—' }}</p>
+      <p><strong>Adresse :</strong>
+        {{ selected.fields.adresse_1 || '' }}
+        {{ selected.fields.adresse_2 || '' }}<br>
+        {{ selected.fields.code_postal || '' }} {{ selected.fields.libelle_commune || '' }}
+      </p>
+      <p><strong>Type :</strong> {{ selected.fields.type_etablissement || '—' }}</p>
+      <p><strong>Statut :</strong> {{ selected.fields.statut_public_prive || '—' }}</p>
+
+      <a class="btn" [routerLink]="['/contact']" [queryParams]="{
+        nom: selected.fields.nom_etablissement,
+        adresse: selected.fields.adresse_1,
+        ville: selected.fields.libelle_commune
+      }">Contact</a>
+    </div>
+  </div>
+</div>
