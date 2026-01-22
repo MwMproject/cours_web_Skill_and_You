@@ -48,6 +48,39 @@ foreach ($films as $film) {
 <head>
     <meta charset="UTF-8">
     <title>Recherche de films</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 20px;
+    }
+    h1 {
+        color: #333;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: #0066cc;
+        font-weight: bold;
+    }
+    a:hover {
+        color: #003366;
+    }
+    h3 {
+        margin-bottom: 5px;
+        color: #222;
+    }
+    p {
+        margin-top: 0;
+        color: #555;
+    }
+</style>
 </head>
 <body>
 
