@@ -14,9 +14,10 @@ if (isset($_GET['recherche'])) {
 <head>
     <meta charset="UTF-8">
     <title>Résultats</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="container">
 <h1>Résultats de recherche</h1>
 
 <?php
@@ -44,6 +45,6 @@ if ($recherche != '') {
 
 <br><br>
 <a href="index.php">Retour</a>
-
+</div>
 </body>
 </html>
