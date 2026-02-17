@@ -20,6 +20,17 @@ if (isset($_GET['add'])) {
 
     $produit_id = (int) $_GET['add'];
 
+    // Vérifier que le produit existe
+    $check = $pdo->prepare("SELECT id FROM produits WHERE id = ?");
+    $check->execute([$produit_id]);
+    $produit = $check->fetch();
+
+    if (!$produit) {
+        // Produit inexistant → on redirige proprement
+        header("Location: index.php");
+        exit;
+    }
+
     // Vérifie si produit déjà dans panier
     $stmt = $pdo->prepare("
         SELECT id, quantite 

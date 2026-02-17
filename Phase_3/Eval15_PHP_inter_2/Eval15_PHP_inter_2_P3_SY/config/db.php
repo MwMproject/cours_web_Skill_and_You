@@ -1,4 +1,17 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=ecommerce;charset=utf8","root","");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+
+    $pdo = new PDO(
+        "mysql:host=localhost;dbname=ecommerce;charset=utf8",
+        "root",
+        ""
+    );
+
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+} catch (PDOException $e) {
+
+    die("Erreur de connexion à la base de données : " . $e->getMessage());
+
+}
 ?>
