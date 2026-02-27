@@ -1,0 +1,156 @@
+-----------------------------------------------------------
+QUESTION 1 - DICTIONNAIRE DE DONNEES
+-----------------------------------------------------------
+[ ENTITE : PASSAGER ]
+id_passager        : identifiant unique passager       (Numérique)
+nom                : nom du passager                   (Alphanumérique 50)
+prenom             : prénom du passager                (Alphanumérique 50)
+date_naissance     : date de naissance                 (Date)
+nationalite        : nationalité                       (Alphanumérique 50)
+sexe               : sexe (F/M)                        (Alphanumérique 1)
+num_piece_identite : numéro pièce identité             (Alphanumérique 20)
+
+
+[ ENTITE : CARTE_EMBARQUEMENT ]
+id_carte           : identifiant carte                 (Numérique)
+siege              : numéro de siège                   (Alphanumérique 5)
+porte_embarquement : numéro porte embarquement         (Numérique)
+heure_embarquement : heure embarquement                (Heure)
+
+
+[ ENTITE : VOL ]
+num_vol             : numéro du vol                    (Alphanumérique 10)
+lieu_depart         : aéroport départ                  (Alphanumérique 50)
+lieu_arrivee        : aéroport arrivée                 (Alphanumérique 50)
+date_vol            : date du vol                      (Date)
+
+
+[ ENTITE : COMPAGNIE ]
+id_compagnie        : identifiant compagnie            (Numérique)
+nom_compagnie       : nom compagnie                    (Alphanumérique 50)
+
+
+[ ENTITE : BAGAGE ]
+id_bagage           : code bagage (10 chiffres)        (Numérique 10)
+poids               : poids bagage                     (Numérique)
+statut_charge       : état bagage (domaine :           (Alphanumérique 20)
+                      enregistré /chargé / livré)                  
+date_enregistrement : date enregistrement              (Date)
+
+
+[ ENTITE : ADRESSE_LIVRAISON ]
+id_adresse          : identifiant adresse              (Numérique)
+rue                 : rue                              (Alphanumérique 100)
+code_postal         : code postal                      (Alphanumérique 10)
+ville               : ville                            (Alphanumérique 50)
+pays                : pays                             (Alphanumérique 50)
+
+-----------------------------------------------------------
+QUESTION 2 - INFORMATIONS MANQUANTES
+-----------------------------------------------------------
+Les informations qui semblent manquer pour répondre correctement au besoin sont :
+- La date et heure exactes du chargement du bagage
+- Le statut détaillé du bagage (si chargé ou en transit ou perdu ou livré)
+- Les coordonnées du passager pour la livraison
+- L'agent responsable de l’enregistrement
+
+-----------------------------------------------------------
+QUESTION 3 - TECHNIQUE DE RECUEIL
+-----------------------------------------------------------
+La technique la plus adaptée serait de réaliser des entretiens avec les agents d’enregistrement et avec les responsables logistiques de la compagnie aérienne.
+
+Ces échanges permettraient de mieux comprendre les procédures existantes et d’identifier précisément les informations manquantes.
+
+L’analyse des documents internes et des procédures déjà mises en place pourrait également compléter ce travail de recueil.
+
+-----------------------------------------------------------
+QUESTION 4 - MODELE ENTITE / ASSOCIATION (MCD)
+-----------------------------------------------------------
+ENTITES :
+  PASSAGER
+  BAGAGE
+  VOL
+  COMPAGNIE
+  ADRESSE_LIVRAISON
+
+ASSOCIATIONS :
+  PASSAGER --- possède --- BAGAGE
+  PASSAGER (0,1)
+  BAGAGE   (1,1)
+
+  PASSAGER --- possède --- CARTE_EMBARQUEMENT
+  PASSAGER (1,N)
+  CARTE_EMBARQUEMENT (1,1)
+
+  CARTE_EMBARQUEMENT --- concerne --- VOL
+  CARTE_EMBARQUEMENT (1,1)
+  VOL (0,N)
+
+  BAGAGE --- transporté_sur --- VOL
+    BAGAGE (1,N)
+    VOL     (0,N)
+
+  VOL --- opéré_par --- COMPAGNIE
+    VOL        (1,1)
+    COMPAGNIE  (0,N)
+
+  BAGAGE --- livré_a --- ADRESSE_LIVRAISON
+    BAGAGE  (0,1)
+    ADRESSE (0,N)
+
+-----------------------------------------------------------
+QUESTION 5 - SCHEMA RELATIONNEL
+-----------------------------------------------------------
+PASSAGER(
+ id_passager PK,
+ nom,
+ prenom,
+ date_naissance,
+ nationalite,
+ sexe,
+ num_piece_identite
+)
+
+CARTE_EMBARQUEMENT(
+ id_carte PK,
+ siege,
+ porte_embarquement,
+ heure_embarquement,
+ #id_passager FK,
+ #num_vol FK
+)
+
+COMPAGNIE(
+ id_compagnie PK,
+ nom_compagnie
+)
+
+VOL(
+ num_vol PK,
+ lieu_depart,
+ lieu_arrivee,
+ date_vol,
+ #id_compagnie FK
+)
+
+ADRESSE_LIVRAISON(
+ id_adresse PK,
+ rue,
+ code_postal,
+ ville,
+ pays
+)
+
+BAGAGE(
+ id_bagage PK,
+ poids,
+ statut_charge,
+ date_enregistrement,
+ #id_passager FK,
+ #id_adresse FK
+)
+
+BAGAGE_VOL(
+ #id_bagage FK,
+ #num_vol FK
+)
