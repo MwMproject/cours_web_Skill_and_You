@@ -33,7 +33,6 @@ export class MapComponent implements AfterViewInit {
 
     const L = await import('leaflet');
 
-    // ⚠️ Fix Angular + Leaflet (container déjà initialisé)
     const container = L.DomUtil.get('map');
     if (container) {
       // @ts-ignore
@@ -61,7 +60,6 @@ export class MapComponent implements AfterViewInit {
     this._schools.forEach(school => {
       const f = school.fields;
 
-      // ✅ LES BONNES PROPRIÉTÉS
       if (f?.latitude && f?.longitude) {
         L.circleMarker([f.latitude, f.longitude], {
           radius: 6,
@@ -70,10 +68,12 @@ export class MapComponent implements AfterViewInit {
           fillOpacity: 0.8
         })
         .bindPopup(`
-          <strong>${f.nom_etablissement}</strong><br>
-          ${f.adresse_1 || ''}<br>
-          ${f.code_postal} ${f.libelle_commune}
-        `)
+        <strong>${f.nom_etablissement || 'Établissement'}</strong><br>
+        ${f.adresse_1 || ''}<br>
+        ${[f.code_postal, f.libelle_commune || 'Lyon']
+          .filter(Boolean)
+          .join(' ')}
+      `)
         .addTo(this.markersLayer);
       }
     });
