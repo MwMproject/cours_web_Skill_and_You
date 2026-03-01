@@ -10,12 +10,14 @@ export class SchoolService {
   constructor(private http: HttpClient) {}
 
   getSchoolsByCity(city: string): Observable<SchoolRecord[]> {
-    return this.http.get<any>(this.apiUrl, {
-      params: {
-        dataset: 'fr-en-annuaire-education',
-        'refine.libelle_commune': city,
-        rows: '200'
-      }
-    }).pipe(map(res => (res?.records ?? []) as SchoolRecord[]));
-  }
+  return this.http.get<any>(this.apiUrl, {
+    params: {
+      dataset: 'fr-en-annuaire-education',
+      q: city,
+      rows: '200'
+    }
+  }).pipe(
+    map(res => (res?.records ?? []) as SchoolRecord[])
+  );
+}
 }
