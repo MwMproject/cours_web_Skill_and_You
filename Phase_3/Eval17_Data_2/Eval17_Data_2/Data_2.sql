@@ -5,18 +5,19 @@
 
 -- Supprime la base si elle existe déjà
 DROP DATABASE IF EXISTS ecole_rdv;
-
 -- Crée la base de données
 CREATE DATABASE ecole_rdv;
-
 -- Sélectionne la base
 USE ecole_rdv;
 
+-- ============================================
+-- Création des tables
+-- ============================================
 -- Table des élèves
 CREATE TABLE eleves (
     eleve_id INT AUTO_INCREMENT PRIMARY KEY,
-    eleve_nom VARCHAR(50),
-    eleve_prenom VARCHAR(50)
+    eleve_nom VARCHAR(45),                  
+    eleve_prenom VARCHAR(45)
 );
 
 -- Table des professeurs
@@ -29,10 +30,11 @@ CREATE TABLE professeurs (
 -- Table des matières
 CREATE TABLE matieres (
     matiere_id INT AUTO_INCREMENT PRIMARY KEY,
-    matiere_nom VARCHAR(50)
+    matiere_nom VARCHAR(100),
+    matiere_desc VARCHAR(250)
 );
 
--- Table des cours liés à une matière
+-- Table des cours (liés à une matière)
 CREATE TABLE cours (
     cours_id INT AUTO_INCREMENT PRIMARY KEY,
     cours_nom VARCHAR(50),
@@ -41,7 +43,7 @@ CREATE TABLE cours (
     FOREIGN KEY (matiere_id) REFERENCES matieres(matiere_id)
 );
 
--- Table des devoirs liés à un cours
+-- Table des devoirs (liés à un cours)
 CREATE TABLE devoirs (
     devoir_id INT AUTO_INCREMENT PRIMARY KEY,
     devoir_nom VARCHAR(250),
@@ -50,8 +52,8 @@ CREATE TABLE devoirs (
     FOREIGN KEY (cours_id) REFERENCES cours(cours_id)
 );
 
--- Table des rendez-vous
-CREATE TABLE rendez_vous (
+-- Table des rendez-vous (rdv)
+CREATE TABLE rdv (
     rdv_id INT AUTO_INCREMENT PRIMARY KEY,
     eleve_id INT,
     matiere_id INT,
@@ -75,6 +77,11 @@ CREATE TABLE enseigner (
     FOREIGN KEY (matiere_id) REFERENCES matieres(matiere_id)
 );
 
+
+-- ============================================
+-- Gestion des utilisateurs et rôles
+-- ============================================
+
 -- Création des utilisateurs
 CREATE USER IF NOT EXISTS 'eleve1'@'localhost' IDENTIFIED BY 'password';
 CREATE USER IF NOT EXISTS 'prof1'@'localhost' IDENTIFIED BY 'password';
@@ -83,24 +90,34 @@ CREATE USER IF NOT EXISTS 'prof1'@'localhost' IDENTIFIED BY 'password';
 CREATE ROLE IF NOT EXISTS 'eleve';
 CREATE ROLE IF NOT EXISTS 'professeur';
 
--- Droits du rôle élève sur les rendez-vous
+-- ============================================
+-- Attribution des droits
+-- ============================================
+
+-- Rôle élève : gestion complète de ses rendez-vous
 GRANT SELECT, INSERT, UPDATE, DELETE
-ON ecole_rdv.rendez_vous
+ON ecole_rdv.rdv
 TO 'eleve';
 
--- Droits du rôle professeur sur les rendez-vous
+-- Rôle professeur : consulter et supprimer les rendez-vous
 GRANT SELECT, DELETE
-ON ecole_rdv.rendez_vous
+ON ecole_rdv.rdv
 TO 'professeur';
 
--- Droits du rôle professeur sur les cours
+-- Rôle professeur : gérer les cours (lecture, ajout, modification)
 GRANT SELECT, INSERT, UPDATE
 ON ecole_rdv.cours
 TO 'professeur';
 
+-- ============================================
 -- Attribution des rôles aux utilisateurs
+-- ============================================
 GRANT 'eleve' TO 'eleve1'@'localhost';
 GRANT 'professeur' TO 'prof1'@'localhost';
 
--- Met à jour les privilèges
+-- Active les rôles par défaut
+SET DEFAULT ROLE 'eleve' TO 'eleve1'@'localhost';
+SET DEFAULT ROLE 'professeur' TO 'prof1'@'localhost';
+
+-- Applique les modifications de privilèges
 FLUSH PRIVILEGES;
