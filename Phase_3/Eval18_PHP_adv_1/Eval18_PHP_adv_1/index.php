@@ -2,7 +2,7 @@
 
 // Chemin absolu vers le répertoire des images
 // dirname(__FILE__) retourne le dossier où se trouve ce fichier
-$image_dir = dirname(__FILE__) . '/images/';
+$image_dir = dirname(__FILE__) . '/vrac/';
 
 // On inclut la classe Image
 require('class/Image.php');
