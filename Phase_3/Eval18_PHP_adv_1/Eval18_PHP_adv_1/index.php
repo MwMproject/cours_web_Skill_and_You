@@ -5,7 +5,7 @@
 $image_dir = dirname(__FILE__) . '/vrac/';
 
 // On inclut la classe Image
-require('class/Image.php');
+require('src/Image.php');
 
 // On crée un objet Image pour utiliser ses méthodes
 $image = new Image();
