@@ -1,6 +1,6 @@
 <?php
 // Ce fichier récupère les données depuis la BDD et les envoie au template
-require_once(dirname(__FILE__) . '/../class/Meteo.php');
+require_once(dirname(__FILE__) . '/../src/Meteo.php');
 $meteo = new Meteo();
 
 // Récupération uniquement du lendemain (06/12) et surlendemain (07/12)

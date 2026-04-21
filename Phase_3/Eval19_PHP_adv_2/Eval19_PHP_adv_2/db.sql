@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS projet_meteo;
+USE projet_meteo;
+
 CREATE TABLE `projet_meteo`.`meteo` (
     `id` INT NOT NULL AUTO_INCREMENT ,
     `date` DATE NOT NULL ,

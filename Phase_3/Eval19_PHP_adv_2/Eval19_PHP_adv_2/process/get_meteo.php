@@ -1,6 +1,6 @@
 <?php
 // On récupère les données depuis le flux et on les stocke en base de données
-require_once(dirname(__FILE__) . '/../class/Meteo.php');
+require_once(dirname(__FILE__) . '/../src/Meteo.php');
 $url = "http://localhost/paris.csv";
 
 $meteo = new Meteo();
