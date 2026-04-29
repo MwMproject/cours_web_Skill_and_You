@@ -1,0 +1,45 @@
+-- =========================
+-- EXERCICE 1
+-- 
+-- =========================
+
+-- 1. Types des wagons du train 4802
+SELECT W.type_w
+FROM WAGON W
+JOIN TRAIN T ON W.Num_W = T.Num_W
+WHERE T.Num_T = 4802;
+
+-- 2. Numéros des wagons des lignes L11 et L12
+SELECT DISTINCT T.Num_W
+FROM TRAIN T
+JOIN TRAFIC TR ON T.Num_T = TR.Num_T
+WHERE TR.Num_L IN ('L11', 'L12');
+
+-- 3. Numéros des wagons communs aux lignes L11 et L12
+SELECT DISTINCT T.Num_W
+FROM TRAIN T
+JOIN TRAFIC TR ON T.Num_T = TR.Num_T
+WHERE TR.Num_L = 'L11'
+AND T.Num_W IN (
+    SELECT T2.Num_W
+    FROM TRAIN T2
+    JOIN TRAFIC TR2 ON T2.Num_T = TR2.Num_T
+    WHERE TR2.Num_L = 'L12'
+);
+
+-- 4. Numéros des lignes qui partent de la gare de Fribourg
+SELECT DISTINCT L1.Num_L
+FROM LIGNE L1
+JOIN LIGNE L2 ON L1.Num_L = L2.Num_L
+WHERE L1.Gare = 'Fribourg'
+AND L1.Rang < L2.Rang;
+
+-- 5. Numéros des lignes dont Tours est la gare terminus
+SELECT DISTINCT L1.Num_L
+FROM LIGNE L1
+WHERE L1.Gare = 'Tours'
+AND L1.Rang = (
+    SELECT MAX(L2.Rang)
+    FROM LIGNE L2
+    WHERE L2.Num_L = L1.Num_L
+);
