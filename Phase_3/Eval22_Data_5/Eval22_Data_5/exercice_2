@@ -1,0 +1,106 @@
+-- =========================
+-- EXERCICE 2
+-- =========================
+
+-- 6. Combien y a-t-il de pays ?
+SELECT COUNT(*) AS nombre_pays
+FROM PAYS;
+
+-- 7. Combien de pays le Rhin traverse-t-il ?
+SELECT COUNT(*) AS nombre_pays
+FROM TRAVERSER
+WHERE NomF = 'Rhin';
+
+-- 8. Distance totale parcourue par le Rhin
+SELECT SUM(Distance) AS distance_totale
+FROM TRAVERSER
+WHERE NomF = 'Rhin';
+
+-- 9. Pour chaque fleuve, distance totale et distance moyenne
+SELECT NomF,
+       SUM(Distance) AS distance_totale,
+       AVG(Distance) AS distance_moyenne
+FROM TRAVERSER
+GROUP BY NomF;
+
+-- 10. Plus grande distance parcourue dans un pays pour chaque fleuve commençant par A
+SELECT NomF,
+       MAX(Distance) AS plus_grande_distance
+FROM TRAVERSER
+WHERE NomF LIKE 'A%'
+GROUP BY NomF;
+
+-- 11. Pays bordés par plus de deux mers
+SELECT NomP
+FROM COTOYER
+GROUP BY NomP
+HAVING COUNT(NomM) > 2;
+
+-- 12. Fleuves traversant plus de trois pays et commençant par A
+SELECT NomF,
+       AVG(Distance) AS distance_moyenne
+FROM TRAVERSER
+WHERE NomF LIKE 'A%'
+GROUP BY NomF
+HAVING COUNT(NomP) > 3;
+
+-- 13. Nombre d'habitants au kilomètre carré pour chaque pays
+SELECT NomP,
+       NbH / Superficie AS habitants_par_km2
+FROM PAYS;
+
+-- 14. Type de mer dans laquelle se jette le Rhône
+SELECT M.Type
+FROM FLEUVE F
+JOIN MER M ON F.Mer = M.NomM
+WHERE F.NomF = 'Rhône';
+
+-- 15. Superficie des pays traversés par le Danube avec plus de 10 000 000 habitants
+SELECT P.NomP,
+       P.Superficie
+FROM PAYS P
+JOIN TRAVERSER T ON P.NomP = T.NomP
+WHERE T.NomF = 'Danube'
+AND P.NbH > 10000000;
+
+-- 16. Nom et superficie des pays frontaliers de la Suisse
+SELECT P.NomP,
+       P.Superficie
+FROM PAYS P
+JOIN FRONTIERE F ON P.NomP = F.NomP2
+WHERE F.NomP1 = 'Suisse';
+
+-- 17. Longueur des fleuves traversant des pays de plus de 50 000 000 habitants
+SELECT DISTINCT F.NomF,
+       F.Longueur
+FROM FLEUVE F
+JOIN TRAVERSER T ON F.NomF = T.NomF
+JOIN PAYS P ON T.NomP = P.NomP
+WHERE P.NbH > 50000000;
+
+-- 18. Fleuve qui effectue le parcours le plus grand dans un pays
+SELECT NomF,
+       Distance
+FROM TRAVERSER
+WHERE Distance = (
+    SELECT MAX(Distance)
+    FROM TRAVERSER
+);
+
+-- 19. Fleuves qui ont la même longueur que le Rhône
+SELECT NomF
+FROM FLEUVE
+WHERE Longueur = (
+    SELECT Longueur
+    FROM FLEUVE
+    WHERE NomF = 'Rhône'
+)
+AND NomF <> 'Rhône';
+
+-- 20. Fleuve qui traverse le plus de pays
+SELECT NomF,
+       COUNT(NomP) AS nombre_pays
+FROM TRAVERSER
+GROUP BY NomF
+ORDER BY nombre_pays DESC
+LIMIT 1;
