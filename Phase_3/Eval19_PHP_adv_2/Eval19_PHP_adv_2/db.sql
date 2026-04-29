@@ -12,4 +12,5 @@ CREATE TABLE `projet_meteo`.`meteo` (
     `temp_max` INT NOT NULL ,
     `comment` TEXT NOT NULL ,
     PRIMARY KEY (`id`)
+    UNIQUE KEY unique_meteo (`date`, `city`, `period`)
 ) ENGINE = InnoDB;

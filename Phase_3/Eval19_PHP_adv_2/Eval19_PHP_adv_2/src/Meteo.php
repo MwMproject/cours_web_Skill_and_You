@@ -22,7 +22,7 @@ class Meteo {
             exit();
         }
         // Insertion des données dans la table meteo
-        if (!$mysqli->query("INSERT INTO meteo (date, period, city, resume, resume_id, temp_min, temp_max, comment) VALUES ('$date', '$period', '$city', '$resume', $resume_id, $temp_min, $temp_max, '$comment')")) {
+        if (!$mysqli->query("INSERT INTO meteo (date, period, city, resume, resume_id, temp_min, temp_max, `comment`) VALUES ('$date', '$period', '$city', '$resume', $resume_id, $temp_min, $temp_max, '$comment')")) {
             echo "Une erreur est survenue lors de l'insertion des données. Message d'erreur : $mysqli->error";
             return false;
         } else {
@@ -82,7 +82,7 @@ class Meteo {
         }
 
         // Mise à jour de la prévision identifiée par son id
-        $sql = "UPDATE meteo SET date = '$date', period = '$period', city = '$city', resume = '$resume', resume_id = $resume_id, temp_min = $temp_min, temp_max = $temp_max, comment = '$comment' WHERE id = $id";
+        $sql = "UPDATE meteo SET date = '$date', period = '$period', city = '$city', resume = '$resume', resume_id = $resume_id, temp_min = $temp_min, temp_max = $temp_max, `comment` = '$comment' WHERE id = $id";
 
         if (!$mysqli->query($sql)) {
             echo "Une erreur est survenue lors de la mise à jour des données. Message d'erreur : $mysqli->error";
