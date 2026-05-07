@@ -3,13 +3,11 @@
 -- Scripts d'alimentation de la base de test
 -- ============================================
 
--- Base de données : dbb_data4_ecole selon l'annexe 1
 USE `dbb_data4_ecole`;
 
 -- ============================================
 -- QUESTION 1.1
 -- Alimentation de la table formations
--- Selon l'annexe 2 - fichier .txt
 -- Étapes :
 --   1. Ouvrir le fichier .txt
 --   2. Identifier les séparateurs : virgule (,) entre les champs,
@@ -29,7 +27,6 @@ INSERT INTO `formations` (`id_formation`, `nom_formation`, `desc_formation`) VAL
 -- ============================================
 -- QUESTION 1.2
 -- Alimentation des tables matieres et cours
--- Selon l'annexe 3 - fichier Excel
 -- ============================================
 
 INSERT INTO `matieres` (`id_matiere`, `nom_matiere`, `desc_matiere`) VALUES
@@ -38,7 +35,6 @@ INSERT INTO `matieres` (`id_matiere`, `nom_matiere`, `desc_matiere`) VALUES
 (3, 'Gérer une base de données', 'Matière consacrée à la conception et à la gestion des bases de données');
 
 INSERT INTO `cours` (`id_cours`, `nom_cours`, `desc_cours`, `id_matiere`) VALUES
--- PHP initiation (id_matiere = 1)
 (1,  'Installation et fonctionnement', 'Cours PHP initiation', 1),
 (2,  'Bien démarrer en PHP', 'Cours PHP initiation', 1),
 (3,  'Les variables et constantes', 'Cours PHP initiation', 1),
@@ -46,7 +42,6 @@ INSERT INTO `cours` (`id_cours`, `nom_cours`, `desc_cours`, `id_matiere`) VALUES
 (5,  'Tableaux de données', 'Cours PHP initiation', 1),
 (6,  'Variables prédéfinies et variables externes', 'Cours PHP initiation', 1),
 (7,  'PHP et les formulaires', 'Cours PHP initiation', 1),
--- PHP intermédiaire (id_matiere = 2)
 (8,  'Qu''est-ce qu''une base de données', 'Cours PHP intermédiaire', 2),
 (9,  'MySQL', 'Cours PHP intermédiaire', 2),
 (10, 'Premier script PHP-MySQL', 'Cours PHP intermédiaire', 2),
@@ -55,7 +50,6 @@ INSERT INTO `cours` (`id_cours`, `nom_cours`, `desc_cours`, `id_matiere`) VALUES
 (13, 'Réalisation d''un site de contenu en base de données', 'Cours PHP intermédiaire', 2),
 (14, 'Les sessions', 'Cours PHP intermédiaire', 2),
 (15, 'Les cookies', 'Cours PHP intermédiaire', 2),
--- Gérer une base de données (id_matiere = 3)
 (16, 'Recenser les informations du domaine étudié', 'Cours de gestion de base de données', 3),
 (17, 'Organiser les données', 'Cours de gestion de base de données', 3),
 (18, 'Construire l''organisation physique des données', 'Cours de gestion de base de données', 3),
@@ -68,7 +62,6 @@ INSERT INTO `cours` (`id_cours`, `nom_cours`, `desc_cours`, `id_matiere`) VALUES
 (25, 'Le langage de requête pour la base de données', 'Cours de gestion de base de données', 3),
 (26, 'Outil de sauvegarde de base de données', 'Cours de gestion de base de données', 3);
 
--- Association de la formation Développeur web aux 3 matières
 INSERT INTO `formations_matieres` (`id_formation`, `id_matiere`, `date_deb`, `date_fin`) VALUES
 (1, 1, '2024-01-01', '2024-12-31'),
 (1, 2, '2024-01-01', '2024-12-31'),
@@ -78,7 +71,6 @@ INSERT INTO `formations_matieres` (`id_formation`, `id_matiere`, `date_deb`, `da
 -- QUESTION 2
 -- Cas particulier : Weiss Manuel
 -- Formation : Titre professionnel Développeur web et web mobile
--- Devoir : DEVOIR 1 - Elaborer des scripts d'alimentation de la base de test
 -- ============================================
 
 -- Étape 1 : Insertion de l'élève
@@ -91,6 +83,5 @@ INSERT INTO `eleves_formations` (`id_eleve`, `id_formation`, `date_deb_formation
 (19, 1, '2024-01-01', '2024-12-31');
 
 -- Étape 3 : Insertion du devoir lié au cours 23
--- "Elaborer des scripts d'alimentation de la base de test"
 INSERT INTO `devoirs` (`nom_devoir`, `num_devoir`, `desc_devoir`, `id_cours`) VALUES
 ('DEVOIR 1 - Elaborer des scripts d''alimentation de la base de test', 1, 'Devoir portant sur l''élaboration de scripts d''alimentation de la base de test', 23);
