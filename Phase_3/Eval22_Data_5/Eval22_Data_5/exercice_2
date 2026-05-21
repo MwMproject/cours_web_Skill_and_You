@@ -67,8 +67,11 @@ AND P.NbH > 10000000;
 SELECT P.NomP,
        P.Superficie
 FROM PAYS P
-JOIN FRONTIERE F ON P.NomP = F.NomP2
-WHERE F.NomP1 = 'Suisse';
+-- La table FRONTIERE peut stocker (Suisse, France) ou (France, Suisse)
+-- On check les deux cas dans le JOIN pour ne rater aucun frontalier
+JOIN FRONTIERE F ON (P.NomP = F.NomP2 AND F.NomP1 = 'Suisse')
+                 OR (P.NomP = F.NomP1 AND F.NomP2 = 'Suisse')
+WHERE P.NomP <> 'Suisse';
 
 -- 17. Longueur des fleuves traversant des pays de plus de 50 000 000 habitants
 SELECT DISTINCT F.NomF,
