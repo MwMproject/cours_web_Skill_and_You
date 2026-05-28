@@ -1,8 +1,10 @@
 <?php
+declare(strict_types=1);
+
 require_once 'config.php';
 
 $schoolsQuery = $pdo->query("
-    SELECT 
+    SELECT
         sc.id,
         sc.name,
         COUNT(DISTINCT st.id) AS total_students,
@@ -18,7 +20,7 @@ $schoolsQuery = $pdo->query("
 $schools = $schoolsQuery->fetchAll();
 
 $sportsBySchoolQuery = $pdo->prepare("
-    SELECT 
+    SELECT
         sp.name,
         COUNT(ss.student_id) AS total
     FROM sports sp
@@ -105,18 +107,18 @@ $sportsBySchoolQuery = $pdo->prepare("
         <div class="school">
             <h2><?= htmlspecialchars($school['name']) ?></h2>
 
-            <p><strong>Nombre d'élèves :</strong> <?= $school['total_students'] ?></p>
-            <p><strong>Nombre d'élèves pratiquant au moins un sport :</strong> <?= $school['students_with_sport'] ?></p>
-            <p><strong>Nombre d'activités sportives pratiquées :</strong> <?= $school['sports_count'] ?></p>
+            <p><strong>Nombre d'élèves :</strong> <?= (int) $school['total_students'] ?></p>
+            <p><strong>Nombre d'élèves pratiquant au moins un sport :</strong> <?= (int) $school['students_with_sport'] ?></p>
+            <p><strong>Nombre d'activités sportives pratiquées :</strong> <?= (int) $school['sports_count'] ?></p>
 
             <h3>Activités sportives pratiquées</h3>
 
             <?php
             $sportsBySchoolQuery->execute(['school_id' => $school['id']]);
-            $sports = $sportsBySchoolQuery->fetchAll();
+            $sportsList = $sportsBySchoolQuery->fetchAll();
             ?>
 
-            <?php if (empty($sports)): ?>
+            <?php if (empty($sportsList)): ?>
                 <p>Aucune activité sportive pratiquée dans cette école.</p>
             <?php else: ?>
                 <table>
@@ -127,10 +129,10 @@ $sportsBySchoolQuery = $pdo->prepare("
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($sports as $sport): ?>
+                        <?php foreach ($sportsList as $sport): ?>
                             <tr>
                                 <td><?= htmlspecialchars($sport['name']) ?></td>
-                                <td><?= $sport['total'] ?></td>
+                                <td><?= (int) $sport['total'] ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
