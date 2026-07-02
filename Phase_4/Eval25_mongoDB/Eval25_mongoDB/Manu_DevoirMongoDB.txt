@@ -1,51 +1,37 @@
-# Devoir MongoDB : Application Pratique
+Devoir MongoDB : Application Pratique
+Weiss Manuel 
 
-### 1. Création de la base de données et des collections
+1. Creation de la base de donnees et des collections
 
-* **Commande pour créer / sélectionner la base de données** :
+D'abord je me connecte a mongosh et je cree/selectionne la base :
 
-  ```mongodb
-  // Sélectionne ou crée la base "bibliothequeEnLigne"
-  use bibliothequeEnLigne
-  ```
+use bibliothequeEnLigne
 
-* **Commandes pour créer les collections** :
+Puis je cree les 3 collections dont j'ai besoin pour l'appli (une bibliotheque en ligne) :
 
-  ```mongodb
-  // Collection des auteurs
-  db.createCollection("auteurs")
+db.createCollection("auteurs")
+db.createCollection("livres")
+db.createCollection("avis")
 
-  // Collection des livres
-  db.createCollection("livres")
+Modelisation :
 
-  // Collection des avis
-  db.createCollection("avis")
-  ```
+J'ai hesite au debut entre tout mettre dans une seule collection "livres" avec l'auteur et les avis imbriques dedans, mais je me suis dit que ca posait probleme si un auteur a plusieurs livres (je duplique ses infos a chaque fois) et si un livre recoit plein d'avis au fil du temps (le document devient enorme et j'aurais besoin de le mettre a jour tout le temps). Du coup j'ai separe en 3 collections avec des references :
 
-**Modélisation choisie :**
+- livres.auteurs = tableau d'ObjectId qui pointent vers auteurs (un livre peut avoir plusieurs auteurs, et un auteur plusieurs livres)
+- avis.livreId = un seul ObjectId qui pointe vers le livre concerne
 
-J'ai choisi d'utiliser trois collections distinctes plutôt que des documents imbriqués, car les auteurs, les livres et les avis ont des cycles de vie indépendants. Un auteur peut écrire plusieurs livres et un livre peut recevoir plusieurs avis au fil du temps.
+Ca evite de dupliquer les infos et si je dois corriger le nom d'un auteur je le fais a un seul endroit.
 
-Les relations sont représentées par des références :
+2. Insertion de documents
 
-* `livres.auteurs` est un tableau d'`ObjectId` vers `auteurs` (relation many-to-many).
-* `avis.livreId` est un `ObjectId` vers `livres` (relation many-to-one).
+J'ai insere un auteur, un livre lie a cet auteur, et un avis lie a ce livre :
 
-Ce choix évite la duplication des données et facilite les mises à jour.
-
----
-
-### 2. Insertion de documents
-
-```mongodb
-// Ajoute un auteur
 var auteur = db.auteurs.insertOne({
   nom: "Victor Hugo",
   dateNaissance: new Date("1802-02-26"),
   nationalite: "Francaise"
 })
 
-// Ajoute un livre, lié à l'auteur via son ObjectId
 var livre = db.livres.insertOne({
   titre: "Les Miserables",
   anneePublication: 1862,
@@ -53,25 +39,20 @@ var livre = db.livres.insertOne({
   auteurs: [auteur.insertedId]
 })
 
-// Ajoute un avis, lié au livre via son ObjectId
 db.avis.insertOne({
   evaluation: 5,
   commentaire: "Un chef-d'oeuvre intemporel.",
   livreId: livre.insertedId
 })
-```
 
-Des données supplémentaires ont été insérées afin d'obtenir un jeu de test plus riche (un livre publié après 2000 et plusieurs avis avec des notes différentes) :
+J'ai ajoute un deuxieme auteur/livre/avis pour avoir un peu plus de donnees a tester, notamment un livre publie apres 2000 (pour la requete de la partie 3) et des avis avec des notes differentes :
 
-```mongodb
-// Ajoute un second auteur
 var auteur2 = db.auteurs.insertOne({
   nom: "Michel Bussi",
   dateNaissance: new Date("1965-04-01"),
   nationalite: "Francaise"
 })
 
-// Ajoute un livre publié après 2000
 var livre2 = db.livres.insertOne({
   titre: "Nymphea Noir",
   anneePublication: 2011,
@@ -79,7 +60,6 @@ var livre2 = db.livres.insertOne({
   auteurs: [auteur2.insertedId]
 })
 
-// Ajoute deux avis avec des notes différentes
 db.avis.insertOne({
   evaluation: 2,
   commentaire: "Trop previsible a mon gout.",
@@ -91,68 +71,64 @@ db.avis.insertOne({
   commentaire: "Tres bonne intrigue, rebondissements surprenants.",
   livreId: livre2.insertedId
 })
-```
 
-### 3. Requêtes de lecture
+3. Requetes de lecture
 
-```mongodb
-// Livres publiés après 2000
+Livres publies apres 2000 :
+
 db.livres.find({ anneePublication: { $gt: 2000 } })
 
-// Avis avec une évaluation >= 4
+Ca me retourne bien "Nymphea Noir" (2011) et pas "Les Miserables" (1862).
+
+Avis avec une note >= 4 :
+
 db.avis.find({ evaluation: { $gte: 4 } })
-```
 
-### 4. Mise à jour de documents
+4. Mise a jour de documents
 
-```mongodb
-// Récupère le livre cible via son titre
+Je recupere d'abord le livre que je veux modifier grace a son titre :
+
 var livreCible = db.livres.findOne({ titre: "Les Miserables" })
 
-// Ajoute un genre au tableau existant ($push = pas d'écrasement)
+Puis j'ajoute un genre au tableau existant. Au debut j'avais essaye avec $set mais ca remplacait tout le tableau genres au lieu de juste ajouter un element, du coup j'ai utilise $push qui ajoute a la fin sans toucher aux genres deja presents :
+
 db.livres.updateOne(
   { _id: livreCible._id },
   { $push: { genres: "Classique" } }
 )
-```
 
-### 5. Suppression de documents
+5. Suppression de documents
 
-```mongodb
-// Supprime l'avis correspondant à ce commentaire exact
+Je supprime l'avis le moins positif en le ciblant par son commentaire exact :
+
 db.avis.deleteOne({ commentaire: "Trop previsible a mon gout." })
-```
 
-### 6. Indexation
+6. Indexation
 
-```mongodb
-// Index sur anneePublication → évite un scan complet
+Je cree un index sur anneePublication puisque c'est un champ sur lequel je fais des recherches (partie 3), ca evite a MongoDB de parcourir toute la collection a chaque fois :
+
 db.livres.createIndex({ anneePublication: 1 })
 
-// Vérifie que l'index a bien été créé
+Je verifie que l'index est bien la :
+
 db.livres.getIndexes()
-```
 
-### 7. Agrégation
+7. Agregation
 
-```mongodb
-// Compte le nombre de livres par genre
-// $unwind : décompose le tableau "genres"
-// $group : regroupe par genre et compte
-// $sort : trie du genre le plus représenté au moins représenté
+Pour compter le nombre de livres par genre, j'utilise un pipeline en 3 etapes. Le plus dur a comprendre pour moi ca a ete $unwind : en gros si un livre a 2 genres, $unwind va dupliquer temporairement ce livre en 2 documents (un par genre) pour pouvoir les compter separement ensuite.
+
 db.livres.aggregate([
   { $unwind: "$genres" },
   { $group: { _id: "$genres", nombreLivres: { $sum: 1 } } },
   { $sort: { nombreLivres: -1 } }
 ])
-```
 
-**Résultat obtenu lors du test** (avec le jeu de données ci-dessus, après l'ajout du genre *Classique*) :
+Resultat obtenu apres avoir ajoute le genre Classique a Les Miserables :
 
-* Roman : 1
-* Historique : 1
-* Classique : 1
-* Policier : 1
-* Thriller : 1
+Roman : 1
+Historique : 1
+Classique : 1
+Policier : 1
+Thriller : 1
 
-Toutes les commandes ont été testées avec succès dans **mongosh** sur la base de données **bibliothequeEnLigne**.
+Toutes les commandes ont ete testees dans mongosh sur la base bibliothequeEnLigne, ca fonctionne.
