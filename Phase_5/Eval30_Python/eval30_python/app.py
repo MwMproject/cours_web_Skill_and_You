@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request
+from database import Database
 
 app = Flask(__name__)
+
+db = Database()
+db.create_table()
 
 @app.route('/')
 def accueil():
