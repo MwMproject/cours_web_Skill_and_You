@@ -2,7 +2,7 @@ import sqlite3
 
 class Database:
     def __init__(self):
-        self.connection = sqlite3.connect('users.db')
+        self.connection = sqlite3.connect('users.db', check_same_thread=False)
 
     def __del__(self):
         self.connection.close()
@@ -16,4 +16,9 @@ class Database:
                 password TEXT NOT NULL
             )
         ''')
+        self.connection.commit()
+
+    def add_user(self, email, password):
+        cursor = self.connection.cursor()
+        cursor.execute('INSERT INTO users (email, password) VALUES (?, ?)', (email, password))
         self.connection.commit()
