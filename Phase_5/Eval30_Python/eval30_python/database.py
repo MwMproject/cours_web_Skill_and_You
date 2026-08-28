@@ -22,3 +22,8 @@ class Database:
         cursor = self.connection.cursor()
         cursor.execute('INSERT INTO users (email, password) VALUES (?, ?)', (email, password))
         self.connection.commit()
+
+    def get_user_by_email(self, email, password):
+        cursor = self.connection.cursor()
+        cursor.execute('SELECT * FROM users WHERE email = ? AND password = ?', (email, password))
+        return cursor.fetchone()
