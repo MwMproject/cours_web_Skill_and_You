@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from database import Database
 
 connected_user = []
@@ -32,6 +32,11 @@ def login():
             return "Email ou mot de passe incorrect"
 
     return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    connected_user.clear()
+    return redirect('/')
 
 
 
