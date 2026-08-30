@@ -31,7 +31,11 @@ def login():
                 success=True
             )
         else:
-            return "Email ou mot de passe incorrect"
+            return render_template(
+                'login.html',
+                connected_user=connected_user,
+                error="Email ou mot de passe incorrect"
+            )
 
     return render_template('login.html', connected_user=connected_user)
 
@@ -51,7 +55,15 @@ def signup():
 
         if password == password_confirm:
             db.add_user(email, password)
-            return "Utilisateur enregistré"
+            return render_template(
+                'signup.html',
+                connected_user=connected_user,
+                success=True
+            )
         else:
-            return "les mots de passe ne sont pas identiques"
+            return render_template(
+                'signup.html',
+                connected_user=connected_user,
+                error="Les mots de passe ne sont pas identiques"
+            )
     return render_template('signup.html', connected_user=connected_user)
