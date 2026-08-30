@@ -10,10 +10,7 @@ db.create_table()
 
 @app.route('/')
 def accueil():
-    if connected_user:
-        return f"Bonjour {connected_user[0]}"
-    else:
-        return "Bonjour utilisateur anonyme"
+    return render_template('home.html', connected_user=connected_user)
 
 
 
@@ -26,12 +23,17 @@ def login():
         user = db.get_user_by_email(email, password)
 
         if user:
+            connected_user.clear()
             connected_user.append(email)
-            return "Connexion réussie"
+            return render_template(
+                'login.html',
+                connected_user=connected_user,
+                success=True
+            )
         else:
             return "Email ou mot de passe incorrect"
 
-    return render_template('login.html')
+    return render_template('login.html', connected_user=connected_user)
 
 @app.route('/logout')
 def logout():
@@ -52,4 +54,4 @@ def signup():
             return "Utilisateur enregistré"
         else:
             return "les mots de passe ne sont pas identiques"
-    return render_template('signup.html')
+    return render_template('signup.html', connected_user=connected_user)

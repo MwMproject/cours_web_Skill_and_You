@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+    {% if connected_user %}
+        <h1>Bonjour {{ connected_user[0] }}</h1>
+    {% else %}
+        <h1>Bonjour utilisateur anonyme</h1>
+    {% endif %}
+
+{% endblock %}
