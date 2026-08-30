@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from database import Database
+import sqlite3
 
 connected_user = []
 
@@ -54,16 +55,27 @@ def signup():
         password_confirm = request.form['password_confirm']
 
         if password == password_confirm:
-            db.add_user(email, password)
-            return render_template(
-                'signup.html',
-                connected_user=connected_user,
-                success=True
-            )
+            try:
+                db.add_user(email, password)
+
+                return render_template(
+                    'signup.html',
+                    connected_user=connected_user,
+                    success=True
+                )
+
+            except sqlite3.IntegrityError:
+                return render_template(
+                    'signup.html',
+                    connected_user=connected_user,
+                    error="Cet email est déjà utilisé"
+                )
+
         else:
             return render_template(
                 'signup.html',
                 connected_user=connected_user,
                 error="Les mots de passe ne sont pas identiques"
             )
+
     return render_template('signup.html', connected_user=connected_user)
