@@ -1,0 +1,54 @@
+### ÉTAPE 1 : Construction ###
+
+# [INSTRUCTION 1]
+# Utilisez l'image officielle de Node version 19 avec l'étiquette 'bullseye'
+FROM node:19-bullseye as builder
+
+# [INSTRUCTION 2]
+# Copiez les fichiers package.json et package-lock.json de votre frontend dans le conteneur
+# Utilisez la commande COPY
+COPY frontend/package*.json /app/
+
+# [INSTRUCTION 3]
+# Installez les dépendances, en prenant en compte les anciennes dépendances (legacy peer dependencies)
+# Utilisez la commande RUN avec npm
+RUN npm install --legacy-peer-deps --prefix=/app
+
+# [INSTRUCTION 4]
+# Définissez le répertoire de travail dans le conteneur pour /app
+WORKDIR /app
+
+# [INSTRUCTION 5]
+# Copiez l'ensemble du code frontend dans le conteneur
+COPY frontend/. /app/
+
+# [INSTRUCTION 6]
+# Construisez l'application Angular en mode production
+# Utilisez la commande RUN avec npm
+RUN npm run build
+
+### ÉTAPE 2 : Configuration ###
+
+# [INSTRUCTION 7]
+# Utilisez une image Node plus légère, version 16 avec Alpine
+FROM node:16-alpine
+
+# [INSTRUCTION 8]
+# Copiez le code backend dans le conteneur
+COPY backend/. /app/
+
+# [INSTRUCTION 9]
+# Installez les dépendances du backend
+RUN npm install --legacy-peer-deps --prefix=/app
+
+# [INSTRUCTION 10]
+# Copiez les fichiers Angular compilés depuis l'étape 'builder'
+COPY --from=builder /app/dist /app/dist
+
+# [INSTRUCTION 11]
+# Exposez le port utilisé par votre application Express
+EXPOSE 3000
+
+# [INSTRUCTION 12]
+# Définissez la commande pour démarrer l'application
+CMD ["node", "/app/app.js"]
